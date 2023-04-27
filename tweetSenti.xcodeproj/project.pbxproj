@@ -13,6 +13,7 @@
 		14B82F9E29FA85940085FCAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B82F9C29FA85940085FCAB /* Main.storyboard */; };
 		14B82FA029FA85960085FCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B82F9F29FA85960085FCAB /* Assets.xcassets */; };
 		14B82FA329FA85960085FCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B82FA129FA85960085FCAB /* LaunchScreen.storyboard */; };
+		14B82FAB29FA872A0085FCAB /* tweetSenti.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14B82FAA29FA872A0085FCAB /* tweetSenti.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		14B82F9F29FA85960085FCAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B82FA229FA85960085FCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14B82FA429FA85960085FCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14B82FAA29FA872A0085FCAB /* tweetSenti.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = tweetSenti.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				14B82F9F29FA85960085FCAB /* Assets.xcassets */,
 				14B82FA129FA85960085FCAB /* LaunchScreen.storyboard */,
 				14B82FA429FA85960085FCAB /* Info.plist */,
+				14B82FAA29FA872A0085FCAB /* tweetSenti.plist */,
 			);
 			path = tweetSenti;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			files = (
 				14B82FA329FA85960085FCAB /* LaunchScreen.storyboard in Resources */,
 				14B82FA029FA85960085FCAB /* Assets.xcassets in Resources */,
+				14B82FAB29FA872A0085FCAB /* tweetSenti.plist in Resources */,
 				14B82F9E29FA85940085FCAB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
