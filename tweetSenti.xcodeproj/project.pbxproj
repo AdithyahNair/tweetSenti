@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1411AF632A03A95500CBE4EF /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */; };
 		14B82F9729FA85940085FCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B82F9629FA85940085FCAB /* AppDelegate.swift */; };
 		14B82F9929FA85940085FCAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B82F9829FA85940085FCAB /* SceneDelegate.swift */; };
-		14B82F9B29FA85940085FCAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B82F9A29FA85940085FCAB /* ViewController.swift */; };
+		14B82F9B29FA85940085FCAB /* appLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B82F9A29FA85940085FCAB /* appLauncher.swift */; };
 		14B82F9E29FA85940085FCAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B82F9C29FA85940085FCAB /* Main.storyboard */; };
 		14B82FA029FA85960085FCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B82F9F29FA85960085FCAB /* Assets.xcassets */; };
 		14B82FA329FA85960085FCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B82FA129FA85960085FCAB /* LaunchScreen.storyboard */; };
@@ -18,10 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		14B82F9329FA85940085FCAB /* tweetSenti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tweetSenti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14B82F9629FA85940085FCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14B82F9829FA85940085FCAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		14B82F9A29FA85940085FCAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14B82F9A29FA85940085FCAB /* appLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appLauncher.swift; sourceTree = "<group>"; };
 		14B82F9D29FA85940085FCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14B82F9F29FA85960085FCAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14B82FA229FA85960085FCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1411AF612A03A93F00CBE4EF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		14B82F8A29FA85940085FCAB = {
 			isa = PBXGroup;
 			children = (
@@ -67,12 +77,13 @@
 			children = (
 				14B82F9629FA85940085FCAB /* AppDelegate.swift */,
 				14B82F9829FA85940085FCAB /* SceneDelegate.swift */,
-				14B82F9A29FA85940085FCAB /* ViewController.swift */,
+				14B82F9A29FA85940085FCAB /* appLauncher.swift */,
 				14B82F9C29FA85940085FCAB /* Main.storyboard */,
 				14B82F9F29FA85960085FCAB /* Assets.xcassets */,
 				14B82FA129FA85960085FCAB /* LaunchScreen.storyboard */,
 				14B82FA429FA85960085FCAB /* Info.plist */,
 				14B82FAA29FA872A0085FCAB /* tweetSenti.plist */,
+				1411AF612A03A93F00CBE4EF /* Fonts */,
 			);
 			path = tweetSenti;
 			sourceTree = "<group>";
@@ -91,7 +102,6 @@
 				C32F79579FDD829FD3C62FB3 /* Pods-tweetSenti.debug.xcconfig */,
 				A356131F014227CCC59D8830 /* Pods-tweetSenti.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1411AF632A03A95500CBE4EF /* Lobster-Regular.ttf in Resources */,
 				14B82FA329FA85960085FCAB /* LaunchScreen.storyboard in Resources */,
 				14B82FA029FA85960085FCAB /* Assets.xcassets in Resources */,
 				14B82FAB29FA872A0085FCAB /* tweetSenti.plist in Resources */,
@@ -211,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B82F9B29FA85940085FCAB /* ViewController.swift in Sources */,
+				14B82F9B29FA85940085FCAB /* appLauncher.swift in Sources */,
 				14B82F9729FA85940085FCAB /* AppDelegate.swift in Sources */,
 				14B82F9929FA85940085FCAB /* SceneDelegate.swift in Sources */,
 			);
