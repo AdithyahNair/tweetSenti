@@ -6,6 +6,7 @@ target 'tweetSenti' do
   use_frameworks!
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'CLTypingLabel', '~> 0.4'
 
   # Pods for tweetSenti
 
