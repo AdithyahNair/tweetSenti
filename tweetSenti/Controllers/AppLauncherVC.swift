@@ -21,8 +21,8 @@ class AppLauncherVC: UIViewController {
 
     @IBOutlet weak var lblTeams: CLTypingLabel! {
         didSet {
-            lblTeams.font = UIFont(name: "Lobster", size: 24)
-            lblTeams.textColor = .black
+            lblTeams.font = UIFont(name: "Lobster", size: 16)
+            lblTeams.textColor = .white.withAlphaComponent(0.8)
             lblTeams.isHidden = true
         }
     }
@@ -30,7 +30,7 @@ class AppLauncherVC: UIViewController {
     override func viewDidLoad() {
         lblAppName.onTypingAnimationFinished = {
             self.lblTeams.isHidden = false
-            self.lblTeams.text = "by Team Maars"
+            self.lblTeams.text = "Providing groundbreaking Twitter sentiment analysis."
             
         }
     }
