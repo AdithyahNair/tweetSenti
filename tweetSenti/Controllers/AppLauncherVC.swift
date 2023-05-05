@@ -19,23 +19,29 @@ class AppLauncherVC: UIViewController {
         }
     }
 
-    @IBOutlet var lblTeams: CLTypingLabel! {
+    @IBOutlet var lblTeams: UILabel! {
         didSet {
-            lblTeams.numberOfLines = 0
             lblTeams.font = UIFont(name: "Lobster", size: 16)
-            lblTeams.textColor = .white.withAlphaComponent(0.8)
-            lblTeams.isHidden = true
-            lblTeams.charInterval = 0.036
+            lblTeams.textColor = .white.withAlphaComponent(0.7)
+            lblTeams.text = "Twitter Sentimental Analysis"
+            lblTeams.alpha = 0
         }
     }
+    
+    //MARK: - Functions
 
     override func viewDidLoad() {
         lblAppName.onTypingAnimationFinished = {
-            self.lblTeams.isHidden = false
-            self.lblTeams.text = """
-                Providing groundbreaking
-                Twitter sentiment analysis.
-            """
+            self.setUp()
+        }
+    }
+    
+    private func setUp() {
+        UIView.animate(withDuration: 1) {
+            self.lblTeams.alpha = 1
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+            self.performSegue(withIdentifier: "toOnboarding", sender: self)
         }
     }
 }
