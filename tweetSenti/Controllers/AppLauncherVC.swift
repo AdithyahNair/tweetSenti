@@ -19,19 +19,23 @@ class AppLauncherVC: UIViewController {
         }
     }
 
-    @IBOutlet weak var lblTeams: CLTypingLabel! {
+    @IBOutlet var lblTeams: CLTypingLabel! {
         didSet {
+            lblTeams.numberOfLines = 0
             lblTeams.font = UIFont(name: "Lobster", size: 16)
             lblTeams.textColor = .white.withAlphaComponent(0.8)
             lblTeams.isHidden = true
+            lblTeams.charInterval = 0.036
         }
     }
-    
+
     override func viewDidLoad() {
         lblAppName.onTypingAnimationFinished = {
             self.lblTeams.isHidden = false
-            self.lblTeams.text = "Providing groundbreaking Twitter sentiment analysis."
-            
+            self.lblTeams.text = """
+                Providing groundbreaking
+                Twitter sentiment analysis.
+            """
         }
     }
 }
