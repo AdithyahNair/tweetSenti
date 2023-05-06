@@ -23,18 +23,33 @@ class OnboardingVC: UIViewController {
     @IBOutlet var lblDescription: UILabel! {
         didSet {
             lblDescription.numberOfLines = 0
-            lblDescription.text = "Unlock insights from the Twitterverse: Explore and analyze real-time sentiment trends for your social media strategy."
+            lblDescription.text = "Discover tweet sentiments: Enhance your social strategy with real-time analysis."
             lblDescription.font = UIFont(name: "Lobster", size: 16)
             lblDescription.textColor = .gray.withAlphaComponent(0.5)
             lblDescription.textAlignment = .center
         }
     }
 
-    @IBOutlet var lblVersion: UILabel!
+    @IBOutlet var lblVersion: UILabel! {
+        didSet {
+            lblVersion.text = "v1.0.0"
+            lblVersion.textColor = .systemGray
+            lblVersion.font = UIFont.systemFont(ofSize: 12, weight: .light)
+        }
+    }
 
-    @IBOutlet var btnSignUp: UIButton!
+    @IBOutlet var btnSignUp: UIButton! {
+        didSet {
+            btnSignUp.setTitle("Sign up", for: .normal)
+        }
+    }
 
-    @IBOutlet var btnLogin: UIButton!
+    @IBOutlet var btnLogin: UIButton! {
+        didSet {
+            btnLogin.setTitle("Login", for: .normal)
+            btnLogin.layer.cornerRadius = 12
+        }
+    }
 
     // MARK: - Methods
 
