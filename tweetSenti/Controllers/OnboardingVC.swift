@@ -60,6 +60,6 @@ class OnboardingVC: Navigation {
     }
 
     @objc func didTapSignUpBtn() {
-        self.moveToSignUpVC()
+        moveToSignUpVC()
     }
 }

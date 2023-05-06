@@ -8,15 +8,17 @@
 import UIKit
 
 class Navigation: UIViewController {
+    // MARK: - Methods
+
     public func moveToOnboardingVC() {
         let storyBoard = UIStoryboard(name: "Onboarding", bundle: nil)
         let viewController = storyBoard.instantiateViewController(identifier: "Onboarding") as! OnboardingVC
-        self.navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
-    
+
     public func moveToSignUpVC() {
         let storyBoard = UIStoryboard(name: "SignUp", bundle: nil)
         let viewController = storyBoard.instantiateViewController(identifier: "SignUp") as! SignUpVC
-        self.navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

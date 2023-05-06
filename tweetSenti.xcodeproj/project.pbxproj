@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1411AF632A03A95500CBE4EF /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */; };
 		141E4A422A056AFE00E58411 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E4A412A056AFE00E58411 /* OnboardingVC.swift */; };
+		142C5B8D2A067BCD00F0F6E6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C5B8C2A067BCD00F0F6E6 /* Extension.swift */; };
 		148DCBB22A065E6300FE18C5 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148DCBB12A065E6300FE18C5 /* Onboarding.storyboard */; };
 		148DCBB42A065F0600FE18C5 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148DCBB32A065F0600FE18C5 /* Navigation.swift */; };
 		14B7C31A2A06509C003C8A75 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B7C3192A06509C003C8A75 /* SignUp.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		141E4A412A056AFE00E58411 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		142C5B8C2A067BCD00F0F6E6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		148DCBB12A065E6300FE18C5 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		148DCBB32A065F0600FE18C5 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		14B7C3192A06509C003C8A75 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
@@ -70,8 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				14B82F9C29FA85940085FCAB /* AppLaunch.storyboard */,
-				14B7C3192A06509C003C8A75 /* SignUp.storyboard */,
 				148DCBB12A065E6300FE18C5 /* Onboarding.storyboard */,
+				14B7C3192A06509C003C8A75 /* SignUp.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				148DCBB32A065F0600FE18C5 /* Navigation.swift */,
+				142C5B8C2A067BCD00F0F6E6 /* Extension.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				14B82F9B29FA85940085FCAB /* AppLauncherVC.swift in Sources */,
 				141E4A422A056AFE00E58411 /* OnboardingVC.swift in Sources */,
+				142C5B8D2A067BCD00F0F6E6 /* Extension.swift in Sources */,
 				14B82F9729FA85940085FCAB /* AppDelegate.swift in Sources */,
 				148DCBB42A065F0600FE18C5 /* Navigation.swift in Sources */,
 				14B7C31C2A065118003C8A75 /* SignUpVC.swift in Sources */,
