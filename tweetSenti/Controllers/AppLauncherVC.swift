@@ -9,7 +9,7 @@ import CLTypingLabel
 import UIKit
 
 class AppLauncherVC: UIViewController {
-    // MARK: - Properties
+    // MARK: - Outlets
 
     @IBOutlet var lblAppName: CLTypingLabel! {
         didSet {
@@ -28,7 +28,7 @@ class AppLauncherVC: UIViewController {
         }
     }
     
-    //MARK: - Functions
+    //MARK: - Methods
 
     override func viewDidLoad() {
         lblAppName.onTypingAnimationFinished = {
