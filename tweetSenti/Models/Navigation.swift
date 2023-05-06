@@ -21,4 +21,10 @@ class Navigation: UIViewController {
         let viewController = storyBoard.instantiateViewController(identifier: "SignUp") as! SignUpVC
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    public func moveToLoginVC() {
+        let storyBoard = UIStoryboard(name: "Login", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(identifier: "Login") as! LoginVC
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

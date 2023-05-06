@@ -49,6 +49,7 @@ class OnboardingVC: Navigation {
         didSet {
             btnLogin.setTitle("Login", for: .normal)
             btnLogin.layer.cornerRadius = 12
+            btnLogin.addTarget(self, action: #selector(didTapLoginBtn), for: .touchUpInside)
         }
     }
 
@@ -61,5 +62,9 @@ class OnboardingVC: Navigation {
 
     @objc func didTapSignUpBtn() {
         moveToSignUpVC()
+    }
+    
+    @objc func didTapLoginBtn() {
+        moveToLoginVC()
     }
 }
