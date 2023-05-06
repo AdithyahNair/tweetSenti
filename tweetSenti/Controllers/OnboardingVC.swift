@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OnboardingVC: UIViewController {
+class OnboardingVC: Navigation {
     // MARK: - Outlets
 
     @IBOutlet var lblGetSentiment: UILabel! {
@@ -41,6 +41,7 @@ class OnboardingVC: UIViewController {
     @IBOutlet var btnSignUp: UIButton! {
         didSet {
             btnSignUp.setTitle("Sign up", for: .normal)
+            btnSignUp.addTarget(self, action: #selector(didTapSignUpBtn), for: .touchUpInside)
         }
     }
 
@@ -56,5 +57,9 @@ class OnboardingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
+    }
+
+    @objc func didTapSignUpBtn() {
+        self.moveToSignUpVC()
     }
 }

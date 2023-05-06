@@ -8,7 +8,9 @@
 import CLTypingLabel
 import UIKit
 
-class AppLauncherVC: UIViewController {
+class AppLauncherVC: Navigation {
+    // MARK: - Properties
+
     // MARK: - Outlets
 
     @IBOutlet var lblAppName: CLTypingLabel! {
@@ -27,21 +29,21 @@ class AppLauncherVC: UIViewController {
             lblTeams.alpha = 0
         }
     }
-    
-    //MARK: - Methods
+
+    // MARK: - Methods
 
     override func viewDidLoad() {
         lblAppName.onTypingAnimationFinished = {
             self.setUp()
         }
     }
-    
+
     private func setUp() {
         UIView.animate(withDuration: 1) {
             self.lblTeams.alpha = 1
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.performSegue(withIdentifier: "toOnboarding", sender: self)
+            self.moveToOnboardingVC()
         }
     }
 }
