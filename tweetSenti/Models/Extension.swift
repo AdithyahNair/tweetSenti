@@ -17,7 +17,7 @@ extension UITextField {
         bottomLine.backgroundColor = UIColor.gray.withAlphaComponent(0.5).cgColor
         borderStyle = .none
         layer.addSublayer(bottomLine)
-        self.returnKeyType = .next
+        returnKeyType = .next
     }
 }
 
@@ -25,6 +25,14 @@ extension SignUpVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if tFEmail.text?.count == 0 || tFPassword.text?.count == 0 {
+            btnContinue.disable()
+        } else {
+            btnContinue.enable()
+        }
     }
 }
 
@@ -35,4 +43,14 @@ extension LoginVC: UITextFieldDelegate {
     }
 }
 
+extension UIButton {
+    func disable() {
+        isEnabled = false
+        backgroundColor = .gray.withAlphaComponent(0.5)
+    }
 
+    func enable() {
+        isEnabled = true
+        backgroundColor = UIColor(red: 23 / 255, green: 60 / 255, blue: 245 / 255, alpha: 1.0)
+    }
+}

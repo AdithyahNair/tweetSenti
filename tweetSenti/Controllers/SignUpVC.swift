@@ -45,6 +45,7 @@ class SignUpVC: UIViewController {
         didSet {
             btnContinue.setTitle("Continue", for: .normal)
             btnContinue.layer.cornerRadius = 10
+            btnContinue.addTarget(self, action: #selector(didTapContinueBtn), for: .allTouchEvents)
         }
     }
 
@@ -54,5 +55,19 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
         tFEmail.delegate = self
         tFPassword.delegate = self
+        btnContinue.disable()
+    }
+
+    @objc func didTapContinueBtn() {
+        if btnContinue.isEnabled == false {
+            btnContinueAlert()
+        }
+    }
+    
+    func btnContinueAlert() {
+        let alert = UIAlertController(title: "Error", message: nil, preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Please enter a valid email ID and a password", style: .cancel)
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
