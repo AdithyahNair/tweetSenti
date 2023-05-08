@@ -17,5 +17,22 @@ extension UITextField {
         bottomLine.backgroundColor = UIColor.gray.withAlphaComponent(0.5).cgColor
         borderStyle = .none
         layer.addSublayer(bottomLine)
+        self.returnKeyType = .next
     }
 }
+
+extension SignUpVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension LoginVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+

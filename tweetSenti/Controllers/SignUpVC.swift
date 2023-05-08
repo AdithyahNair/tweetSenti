@@ -52,5 +52,7 @@ class SignUpVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tFEmail.delegate = self
+        tFPassword.delegate = self
     }
 }

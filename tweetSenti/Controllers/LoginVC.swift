@@ -50,5 +50,7 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tFEmail.delegate = self
+        tFPassword.delegate = self
     }
 }
