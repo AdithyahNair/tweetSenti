@@ -7,7 +7,7 @@ target 'tweetSenti' do
 pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
 pod 'CLTypingLabel', '~> 0.4'
-
+pod 'IQKeyboardManagerSwift'
   # Pods for tweetSenti
 
 end

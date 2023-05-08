@@ -23,7 +23,7 @@
 		14B82FA029FA85960085FCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B82F9F29FA85960085FCAB /* Assets.xcassets */; };
 		14B82FA329FA85960085FCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B82FA129FA85960085FCAB /* LaunchScreen.storyboard */; };
 		14B82FAB29FA872A0085FCAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14B82FAA29FA872A0085FCAB /* GoogleService-Info.plist */; };
-		14EBFF497C70966FE44F30F8 /* Pods_tweetSenti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BC236EC05A67F7CEF5A11E /* Pods_tweetSenti.framework */; };
+		41C9610B8489C202789C9063 /* Pods_tweetSenti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F862FC3A9E473F0085C153D2 /* Pods_tweetSenti.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +45,9 @@
 		14B82FA229FA85960085FCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14B82FA429FA85960085FCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14B82FAA29FA872A0085FCAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		49BC236EC05A67F7CEF5A11E /* Pods_tweetSenti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tweetSenti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		78D5A1033117F6F2FA482813 /* Pods-tweetSenti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tweetSenti.release.xcconfig"; path = "Target Support Files/Pods-tweetSenti/Pods-tweetSenti.release.xcconfig"; sourceTree = "<group>"; };
-		7C966A2E49EB4EF34FB66509 /* Pods-tweetSenti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tweetSenti.debug.xcconfig"; path = "Target Support Files/Pods-tweetSenti/Pods-tweetSenti.debug.xcconfig"; sourceTree = "<group>"; };
+		97F6A2D9964A9B5A08290731 /* Pods-tweetSenti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tweetSenti.release.xcconfig"; path = "Target Support Files/Pods-tweetSenti/Pods-tweetSenti.release.xcconfig"; sourceTree = "<group>"; };
+		F035AF1F04CDF202DF153E16 /* Pods-tweetSenti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tweetSenti.debug.xcconfig"; path = "Target Support Files/Pods-tweetSenti/Pods-tweetSenti.debug.xcconfig"; sourceTree = "<group>"; };
+		F862FC3A9E473F0085C153D2 /* Pods_tweetSenti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tweetSenti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EBFF497C70966FE44F30F8 /* Pods_tweetSenti.framework in Frameworks */,
+				41C9610B8489C202789C9063 /* Pods_tweetSenti.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 				14B82F9529FA85940085FCAB /* tweetSenti */,
 				14B82F9429FA85940085FCAB /* Products */,
 				DC3E6376B8D04433DC356A2E /* Pods */,
-				9393A2AB9B7BE7B300F2D3D1 /* Frameworks */,
+				401E5D23F61D2DE99124BB83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,10 +136,10 @@
 			path = tweetSenti;
 			sourceTree = "<group>";
 		};
-		9393A2AB9B7BE7B300F2D3D1 /* Frameworks */ = {
+		401E5D23F61D2DE99124BB83 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				49BC236EC05A67F7CEF5A11E /* Pods_tweetSenti.framework */,
+				F862FC3A9E473F0085C153D2 /* Pods_tweetSenti.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,8 +147,8 @@
 		DC3E6376B8D04433DC356A2E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7C966A2E49EB4EF34FB66509 /* Pods-tweetSenti.debug.xcconfig */,
-				78D5A1033117F6F2FA482813 /* Pods-tweetSenti.release.xcconfig */,
+				F035AF1F04CDF202DF153E16 /* Pods-tweetSenti.debug.xcconfig */,
+				97F6A2D9964A9B5A08290731 /* Pods-tweetSenti.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -160,11 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14B82FA729FA85960085FCAB /* Build configuration list for PBXNativeTarget "tweetSenti" */;
 			buildPhases = (
-				95533A249B28B50CF3A48842 /* [CP] Check Pods Manifest.lock */,
+				D8DED783612BBD6A9E632DE3 /* [CP] Check Pods Manifest.lock */,
 				14B82F8F29FA85940085FCAB /* Sources */,
 				14B82F9029FA85940085FCAB /* Frameworks */,
 				14B82F9129FA85940085FCAB /* Resources */,
-				9C2D37073D744ED30C51BF6A /* [CP] Embed Pods Frameworks */,
+				D2C51FD1848BC88BC40A15F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,7 +227,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		95533A249B28B50CF3A48842 /* [CP] Check Pods Manifest.lock */ = {
+		D2C51FD1848BC88BC40A15F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tweetSenti/Pods-tweetSenti-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tweetSenti/Pods-tweetSenti-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tweetSenti/Pods-tweetSenti-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8DED783612BBD6A9E632DE3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,23 +264,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9C2D37073D744ED30C51BF6A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tweetSenti/Pods-tweetSenti-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tweetSenti/Pods-tweetSenti-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tweetSenti/Pods-tweetSenti-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -424,7 +424,7 @@
 		};
 		14B82FA829FA85960085FCAB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C966A2E49EB4EF34FB66509 /* Pods-tweetSenti.debug.xcconfig */;
+			baseConfigurationReference = F035AF1F04CDF202DF153E16 /* Pods-tweetSenti.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -454,7 +454,7 @@
 		};
 		14B82FA929FA85960085FCAB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78D5A1033117F6F2FA482813 /* Pods-tweetSenti.release.xcconfig */;
+			baseConfigurationReference = 97F6A2D9964A9B5A08290731 /* Pods-tweetSenti.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
