@@ -19,27 +19,51 @@ extension UITextField {
         layer.addSublayer(bottomLine)
         returnKeyType = .next
     }
+
+    func isValidEmail(email: String?) -> Bool {
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
+        return predicate.evaluate(with: email)
+    }
 }
 
 extension SignUpVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        if tFEmail.isValidEmail(email: textField.text) {
+            textField.resignFirstResponder()
+            return true
+        } else {
+            btnContinueAlert()
+            return false
+        }
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if tFEmail.text?.count == 0 || tFPassword.text?.count == 0 {
-            btnContinue.disable()
-        } else {
+        if tFEmail.isValidEmail(email: textField.text) && tFPassword.text?.count != 0 {
             btnContinue.enable()
+        } else {
+            btnContinue.disable()
         }
     }
 }
 
 extension LoginVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        if tFEmail.isValidEmail(email: textField.text) {
+            textField.resignFirstResponder()
+            return true
+        } else {
+            btnContinueAlert()
+            return false
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if tFEmail.isValidEmail(email: textField.text) && tFPassword.text?.count != 0 {
+            btnContinue.enable()
+        } else {
+            btnContinue.disable()
+        }
     }
 }
 

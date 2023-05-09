@@ -63,10 +63,10 @@ class SignUpVC: UIViewController {
             btnContinueAlert()
         }
     }
-    
+
     func btnContinueAlert() {
-        let alert = UIAlertController(title: "Error", message: nil, preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: "Please enter a valid email ID and a password", style: .cancel)
+        let alert = UIAlertController(title: "Error", message: "Please enter a valid email and password", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Close", style: .cancel)
         alert.addAction(action)
         present(alert, animated: true)
     }

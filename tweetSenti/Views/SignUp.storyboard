@@ -112,8 +112,8 @@
                         <outlet property="btnContinue" destination="c2W-Dd-FGF" id="SjS-Xx-2Xc"/>
                         <outlet property="lblDisclaimer" destination="EJH-Iy-uLL" id="emn-cs-D0O"/>
                         <outlet property="lblHeading" destination="xrR-pL-K3B" id="w6a-N4-aNc"/>
-                        <outlet property="tFEmail" destination="TL6-kI-OrM" id="WG1-Qw-jLd"/>
-                        <outlet property="tFPassword" destination="2fp-h1-L5J" id="Zfw-WD-ESV"/>
+                        <outlet property="tFEmail" destination="TL6-kI-OrM" id="8iL-Bd-Dmc"/>
+                        <outlet property="tFPassword" destination="2fp-h1-L5J" id="3Jj-Ks-VZS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
