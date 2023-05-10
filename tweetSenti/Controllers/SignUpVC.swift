@@ -6,6 +6,7 @@
 //
 
 import FirebaseAuth
+import FirebaseFirestore
 import UIKit
 
 class SignUpVC: TSBaseVC {
@@ -63,6 +64,14 @@ class SignUpVC: TSBaseVC {
         tFEmail.delegate = self
         tFPassword.delegate = self
         btnContinue.disable()
+//        let db = Firestore.firestore()
+//        db.collection("users").document("tweet").setData(["text": "Hi"]) {
+//            error in
+//            if let error = error {
+//                print("Document failed to write")
+//            }
+//            print("Document written successfully")
+//        }
     }
 
     @objc func didTapContinueBtn() {
