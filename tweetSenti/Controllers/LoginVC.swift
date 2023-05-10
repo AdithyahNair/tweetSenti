@@ -5,6 +5,7 @@
 //  Created by Adithyah Nair on 06/05/23.
 //
 
+import FirebaseAuth
 import UIKit
 
 class LoginVC: TSBaseVC {
@@ -65,7 +66,19 @@ class LoginVC: TSBaseVC {
     }
 
     @objc func didTapContinueBtn() {
-        print(#function)
+        FirebaseAuth.Auth.auth().signIn(withEmail: tFEmail.text!, password: tFPassword.text!) {
+            [weak self] result, error in
+            guard let strongSelf = self else {
+                return
+            }
+            guard let result = result, error != nil else {
+                print("Error logging in: \(String(describing: error?.localizedDescription))")
+                return
+            }
+            let user = result.user
+            print("User details: \(user.description)")
+            strongSelf.moveToSentimentVC()
+        }
     }
 
     @objc func didTapBtn() {

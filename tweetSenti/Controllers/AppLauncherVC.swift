@@ -7,6 +7,7 @@
 
 import CLTypingLabel
 import UIKit
+import FirebaseAuth
 
 class AppLauncherVC: TSBaseVC {
     // MARK: - Properties
@@ -43,7 +44,11 @@ class AppLauncherVC: TSBaseVC {
             self.lblTeams.alpha = 1
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.moveToOnboardingVC()
+            if Auth.auth().currentUser != nil {
+                self.moveToSentimentVC()
+            } else {
+                self.moveToOnboardingVC()
+            }
         }
     }
 }

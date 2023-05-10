@@ -28,6 +28,12 @@ class TSBaseVC: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
+    public func moveToSentimentVC() {
+        let storyBoard = UIStoryboard(name: "Sentiment", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "Sentiment") as! SentimentVC
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
     public func alert() {
         let alert = UIAlertController(title: "Error", message: "Please enter a valid email address and a password of six characters or more", preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "Close", style: .cancel)

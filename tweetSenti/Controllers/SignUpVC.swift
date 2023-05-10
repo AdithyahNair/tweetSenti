@@ -66,13 +66,17 @@ class SignUpVC: TSBaseVC {
     }
 
     @objc func didTapContinueBtn() {
-        FirebaseAuth.Auth.auth().createUser(withEmail: tFEmail.text!, password: tFPassword.text!) { authResult, error in
-            guard let result = authResult, error == nil else {
-                print("error: \(error?.localizedDescription)")
+        FirebaseAuth.Auth.auth().createUser(withEmail: tFEmail.text!, password: tFPassword.text!) { [weak self] result, error in
+            guard let strongSelf = self else {
+                return
+            }
+            guard let result = result, error == nil else {
+                print("error: \(String(describing: error?.localizedDescription))")
                 return
             }
             let uID = result.user.uid
             print("User created with UID: \(uID)")
+            strongSelf.moveToSentimentVC()
         }
     }
 
