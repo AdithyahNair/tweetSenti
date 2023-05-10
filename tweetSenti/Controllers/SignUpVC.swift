@@ -41,6 +41,12 @@ class SignUpVC: TSBaseVC {
         }
     }
 
+    @IBOutlet var btn: UIButton! {
+        didSet {
+            btn.addTarget(self, action: #selector(didTapContinueBtn), for: .allTouchEvents)
+        }
+    }
+
     @IBOutlet var btnContinue: UIButton! {
         didSet {
             btnContinue.setTitle("Continue", for: .normal)
@@ -60,7 +66,7 @@ class SignUpVC: TSBaseVC {
 
     @objc func didTapContinueBtn() {
         if btnContinue.isEnabled == false {
-            btnContinueAlert()
+            alert()
         }
     }
 }

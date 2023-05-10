@@ -28,7 +28,7 @@ class TSBaseVC: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
-    public func btnContinueAlert() {
+    public func alert() {
         let alert = UIAlertController(title: "Error", message: "Please enter a valid email and password", preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "Close", style: .cancel)
         alert.addAction(action)

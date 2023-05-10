@@ -33,7 +33,7 @@ extension SignUpVC: UITextFieldDelegate {
         if tFEmail.isValidEmail(email: tFEmail.text) {
             return true
         }
-        btnContinueAlert()
+        alert()
         return false
     }
 
@@ -52,7 +52,7 @@ extension LoginVC: UITextFieldDelegate {
         if tFEmail.isValidEmail(email: tFEmail.text) {
             return true
         }
-        btnContinueAlert()
+        alert()
         return false
     }
 

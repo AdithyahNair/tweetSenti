@@ -33,7 +33,7 @@
                                 <rect key="frame" x="16" y="535.66666666666663" width="361" height="32"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ibE-7j-G14">
-                                        <rect key="frame" x="0.0" y="2.3333333333333339" width="22.333333333333332" height="28"/>
+                                        <rect key="frame" x="0.0" y="2.3333333333333339" width="22.333333333333332" height="27.999999999999993"/>
                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xet-lO-exp" userLabel="tFEmail">
@@ -63,7 +63,7 @@
                                     <constraint firstAttribute="height" constant="32" id="Z9O-rU-soP"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYt-vi-qKx" userLabel="lblContinue">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYt-vi-qKx" userLabel="btnContinue">
                                 <rect key="frame" x="16" y="748" width="361" height="54"/>
                                 <color key="backgroundColor" red="0.090196087960000004" green="0.2352941036" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>

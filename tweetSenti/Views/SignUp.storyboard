@@ -63,7 +63,18 @@
                                     <constraint firstAttribute="height" constant="32" id="DTX-oA-uMX"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2W-Dd-FGF" userLabel="lblContinue">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tY-fZ-moK" userLabel="btn">
+                                <rect key="frame" x="16" y="748" width="361" height="54"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="xW1-0L-JM6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <color key="baseForegroundColor" red="0.98823529480000005" green="0.98823529480000005" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2W-Dd-FGF" userLabel="btnContinue">
                                 <rect key="frame" x="16" y="748" width="361" height="54"/>
                                 <color key="backgroundColor" red="0.090196078431372548" green="0.2352941036" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -92,9 +103,12 @@
                             <constraint firstItem="EJH-Iy-uLL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="4Fo-mm-FeN"/>
                             <constraint firstItem="ZQl-YF-riJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="6Mt-46-pG1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hzx-PA-Yuu" secondAttribute="trailing" constant="16" id="9rO-1S-oYp"/>
+                            <constraint firstItem="5tY-fZ-moK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="BtX-cO-NiL"/>
+                            <constraint firstItem="5tY-fZ-moK" firstAttribute="top" secondItem="EJH-Iy-uLL" secondAttribute="bottom" constant="48" id="CoQ-YV-cTn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EJH-Iy-uLL" secondAttribute="trailing" constant="16" id="Fak-zD-VTi"/>
                             <constraint firstItem="aW8-Hm-0cm" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="K79-eE-lot"/>
                             <constraint firstItem="ZQl-YF-riJ" firstAttribute="top" secondItem="Hzx-PA-Yuu" secondAttribute="bottom" constant="32" id="MT9-xX-5j2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="5tY-fZ-moK" secondAttribute="bottom" constant="16" id="MTs-Xa-nuJ"/>
                             <constraint firstItem="xrR-pL-K3B" firstAttribute="top" secondItem="aW8-Hm-0cm" secondAttribute="bottom" constant="24" id="SYM-JY-NSM"/>
                             <constraint firstItem="xrR-pL-K3B" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="SmC-cd-cHA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xrR-pL-K3B" secondAttribute="trailing" constant="16" id="TxR-PR-7VR"/>
@@ -102,6 +116,7 @@
                             <constraint firstItem="EJH-Iy-uLL" firstAttribute="top" secondItem="ZQl-YF-riJ" secondAttribute="bottom" constant="48" id="beY-Ie-2Qr"/>
                             <constraint firstItem="c2W-Dd-FGF" firstAttribute="top" secondItem="EJH-Iy-uLL" secondAttribute="bottom" constant="48" id="dSh-de-WhR"/>
                             <constraint firstItem="Hzx-PA-Yuu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="gMu-th-d02"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5tY-fZ-moK" secondAttribute="trailing" constant="16" id="jV8-uG-i50"/>
                             <constraint firstItem="c2W-Dd-FGF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="kJc-DJ-iEI"/>
                             <constraint firstItem="Hzx-PA-Yuu" firstAttribute="top" secondItem="xrR-pL-K3B" secondAttribute="bottom" constant="32" id="pmE-MI-E6O"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c2W-Dd-FGF" secondAttribute="trailing" constant="16" id="uye-BP-MR8"/>
@@ -109,6 +124,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btn" destination="5tY-fZ-moK" id="2ej-z9-5gp"/>
                         <outlet property="btnContinue" destination="c2W-Dd-FGF" id="SjS-Xx-2Xc"/>
                         <outlet property="lblDisclaimer" destination="EJH-Iy-uLL" id="emn-cs-D0O"/>
                         <outlet property="lblHeading" destination="xrR-pL-K3B" id="w6a-N4-aNc"/>
