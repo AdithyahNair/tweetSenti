@@ -38,10 +38,12 @@ extension SignUpVC: UITextFieldDelegate {
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if tFEmail.isValidEmail(email: tFEmail.text) && tFPassword.text?.count != 0 {
-            btnContinue.enable()
+        if tFEmail.isValidEmail(email: tFEmail.text) && tFPassword.text?.count ?? 0 >= 6 {
+            btnContinue.enable(value: "btnContinue")
+            btn.disable()
         } else {
             btnContinue.disable()
+            btn.enable(value: "btn")
         }
     }
 }
@@ -58,7 +60,7 @@ extension LoginVC: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         if tFEmail.isValidEmail(email: tFEmail.text) && tFPassword.text?.count != 0 {
-            btnContinue.enable()
+            btnContinue.enable(value: "btnContinue")
         } else {
             btnContinue.disable()
         }
@@ -71,8 +73,13 @@ extension UIButton {
         backgroundColor = .gray.withAlphaComponent(0.5)
     }
 
-    func enable() {
+    func enable(value: String) {
         isEnabled = true
-        backgroundColor = UIColor(red: 23 / 255, green: 60 / 255, blue: 245 / 255, alpha: 1.0)
+        switch value {
+        case "btnContinue": backgroundColor = UIColor(red: 23 / 255, green: 60 / 255, blue: 245 / 255, alpha: 1.0)
+        case "btn": backgroundColor = .none
+        default:
+            backgroundColor = .none
+        }
     }
 }

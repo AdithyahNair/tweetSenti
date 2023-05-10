@@ -29,7 +29,7 @@ class TSBaseVC: UIViewController {
     }
 
     public func alert() {
-        let alert = UIAlertController(title: "Error", message: "Please enter a valid email and password", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Error", message: "Please enter a valid email address and a password of six characters or more", preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "Close", style: .cancel)
         alert.addAction(action)
         present(alert, animated: true)

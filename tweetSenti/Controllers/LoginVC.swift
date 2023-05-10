@@ -41,16 +41,36 @@ class LoginVC: TSBaseVC {
         }
     }
 
+    @IBOutlet var btn: UIButton! {
+        didSet {
+            btn.addTarget(self, action: #selector(didTapBtn), for: .touchUpInside)
+        }
+    }
+
     @IBOutlet var btnContinue: UIButton! {
         didSet {
             btnContinue.setTitle("Continue", for: .normal)
             btnContinue.layer.cornerRadius = 10
+            btnContinue.addTarget(self, action: #selector(didTapContinueBtn), for: .touchUpInside)
         }
     }
+
+    // MARK: - Methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tFEmail.delegate = self
         tFPassword.delegate = self
+        btnContinue.disable()
+    }
+
+    @objc func didTapContinueBtn() {
+        print(#function)
+    }
+
+    @objc func didTapBtn() {
+        if btnContinue.isEnabled == false {
+            alert()
+        }
     }
 }

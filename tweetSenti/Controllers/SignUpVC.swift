@@ -5,6 +5,7 @@
 //  Created by Adithyah Nair on 06/05/23.
 //
 
+import FirebaseAuth
 import UIKit
 
 class SignUpVC: TSBaseVC {
@@ -43,7 +44,7 @@ class SignUpVC: TSBaseVC {
 
     @IBOutlet var btn: UIButton! {
         didSet {
-            btn.addTarget(self, action: #selector(didTapContinueBtn), for: .allTouchEvents)
+            btn.addTarget(self, action: #selector(didTapBtn), for: .touchUpInside)
         }
     }
 
@@ -51,7 +52,7 @@ class SignUpVC: TSBaseVC {
         didSet {
             btnContinue.setTitle("Continue", for: .normal)
             btnContinue.layer.cornerRadius = 10
-            btnContinue.addTarget(self, action: #selector(didTapContinueBtn), for: .allTouchEvents)
+            btnContinue.addTarget(self, action: #selector(didTapContinueBtn), for: .touchUpInside)
         }
     }
 
@@ -65,6 +66,17 @@ class SignUpVC: TSBaseVC {
     }
 
     @objc func didTapContinueBtn() {
+        FirebaseAuth.Auth.auth().createUser(withEmail: tFEmail.text!, password: tFPassword.text!) { authResult, error in
+            guard let result = authResult, error == nil else {
+                print("error: \(error?.localizedDescription)")
+                return
+            }
+            let uID = result.user.uid
+            print("User created with UID: \(uID)")
+        }
+    }
+
+    @objc func didTapBtn() {
         if btnContinue.isEnabled == false {
             alert()
         }
