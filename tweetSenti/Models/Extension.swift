@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UITextField {
+extension UITextField: UITextFieldDelegate {
     // MARK: - Methods
 
     func addBottomBorder() {
@@ -29,17 +29,18 @@ extension UITextField {
 
 extension SignUpVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if tFEmail.isValidEmail(email: textField.text) {
+        if tFEmail.isValidEmail(email: tFEmail.text) {
             textField.resignFirstResponder()
             return true
         } else {
             btnContinueAlert()
+            textField.resignFirstResponder()
             return false
         }
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if tFEmail.isValidEmail(email: textField.text) && tFPassword.text?.count != 0 {
+        if tFEmail.isValidEmail(email: tFEmail.text) && tFPassword.text?.count != 0 {
             btnContinue.enable()
         } else {
             btnContinue.disable()
@@ -49,17 +50,18 @@ extension SignUpVC: UITextFieldDelegate {
 
 extension LoginVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if tFEmail.isValidEmail(email: textField.text) {
+        if tFEmail.isValidEmail(email: tFEmail.text) {
             textField.resignFirstResponder()
             return true
         } else {
             btnContinueAlert()
+            textField.resignFirstResponder()
             return false
         }
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if tFEmail.isValidEmail(email: textField.text) && tFPassword.text?.count != 0 {
+        if tFEmail.isValidEmail(email: tFEmail.text) && tFPassword.text?.count != 0 {
             btnContinue.enable()
         } else {
             btnContinue.disable()
