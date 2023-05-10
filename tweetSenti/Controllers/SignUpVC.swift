@@ -64,14 +64,6 @@ class SignUpVC: TSBaseVC {
         tFEmail.delegate = self
         tFPassword.delegate = self
         btnContinue.disable()
-//        let db = Firestore.firestore()
-//        db.collection("users").document("tweet").setData(["text": "Hi"]) {
-//            error in
-//            if let error = error {
-//                print("Document failed to write")
-//            }
-//            print("Document written successfully")
-//        }
     }
 
     @objc func didTapContinueBtn() {
@@ -84,6 +76,7 @@ class SignUpVC: TSBaseVC {
                 return
             }
             let uID = result.user.uid
+            UserDefaults.standard.set(uID, forKey: "uID")
             print("User created with UID: \(uID)")
             strongSelf.moveToSentimentVC()
         }
