@@ -7,7 +7,7 @@
 
 import UIKit
 
-class OnboardingVC: Navigation {
+class OnboardingVC: TSBaseVC {
     // MARK: - Outlets
 
     @IBOutlet var lblGetSentiment: UILabel! {

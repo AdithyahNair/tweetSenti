@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpVC: UIViewController {
+class SignUpVC: TSBaseVC {
     // MARK: - IBOutlets
 
     @IBOutlet var lblHeading: UILabel! {
@@ -62,12 +62,5 @@ class SignUpVC: UIViewController {
         if btnContinue.isEnabled == false {
             btnContinueAlert()
         }
-    }
-
-    func btnContinueAlert() {
-        let alert = UIAlertController(title: "Error", message: "Please enter a valid email and password", preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: "Close", style: .cancel)
-        alert.addAction(action)
-        present(alert, animated: true)
     }
 }

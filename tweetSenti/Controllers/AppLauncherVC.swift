@@ -8,7 +8,7 @@
 import CLTypingLabel
 import UIKit
 
-class AppLauncherVC: Navigation {
+class AppLauncherVC: TSBaseVC {
     // MARK: - Properties
 
     // MARK: - Outlets

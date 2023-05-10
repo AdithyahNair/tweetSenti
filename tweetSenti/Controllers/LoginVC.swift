@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: TSBaseVC {
     // MARK: - IBOutlets
 
     @IBOutlet var lblHeading: UILabel! {
@@ -52,12 +52,5 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         tFEmail.delegate = self
         tFPassword.delegate = self
-    }
-
-    func btnContinueAlert() {
-        let alert = UIAlertController(title: "Error", message: "Please enter a valid email and password", preferredStyle: .actionSheet)
-        let action = UIAlertAction(title: "Close", style: .cancel)
-        alert.addAction(action)
-        present(alert, animated: true)
     }
 }

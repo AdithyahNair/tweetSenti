@@ -29,14 +29,12 @@ extension UITextField: UITextFieldDelegate {
 
 extension SignUpVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         if tFEmail.isValidEmail(email: tFEmail.text) {
-            textField.resignFirstResponder()
             return true
-        } else {
-            btnContinueAlert()
-            textField.resignFirstResponder()
-            return false
         }
+        btnContinueAlert()
+        return false
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -50,14 +48,12 @@ extension SignUpVC: UITextFieldDelegate {
 
 extension LoginVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         if tFEmail.isValidEmail(email: tFEmail.text) {
-            textField.resignFirstResponder()
             return true
-        } else {
-            btnContinueAlert()
-            textField.resignFirstResponder()
-            return false
         }
+        btnContinueAlert()
+        return false
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {

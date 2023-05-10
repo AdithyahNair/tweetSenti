@@ -1,5 +1,5 @@
 //
-//  Navigation.swift
+//  TSBaseVC.swift
 //  tweetSenti
 //
 //  Created by Adithyah Nair on 06/05/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Navigation: UIViewController {
+class TSBaseVC: UIViewController {
     // MARK: - Methods
 
     public func moveToOnboardingVC() {
@@ -26,5 +26,12 @@ class Navigation: UIViewController {
         let storyBoard = UIStoryboard(name: "Login", bundle: nil)
         let viewController = storyBoard.instantiateViewController(identifier: "Login") as! LoginVC
         navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    public func btnContinueAlert() {
+        let alert = UIAlertController(title: "Error", message: "Please enter a valid email and password", preferredStyle: .actionSheet)
+        let action = UIAlertAction(title: "Close", style: .cancel)
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
