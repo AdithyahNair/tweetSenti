@@ -8,6 +8,10 @@
 import UIKit
 
 class TSBaseVC: UIViewController {
+    // MARK: - Properties
+
+    let db = Firestore.firestore()
+
     // MARK: - Methods
 
     public func moveToOnboardingVC() {
