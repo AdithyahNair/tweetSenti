@@ -66,18 +66,15 @@ class LoginVC: TSBaseVC {
     }
 
     @objc func didTapContinueBtn() {
-        FirebaseAuth.Auth.auth().signIn(withEmail: tFEmail.text!, password: tFPassword.text!) {
-            [weak self] result, error in
-            guard let strongSelf = self else {
-                return
-            }
-            guard let result = result, error != nil else {
-                strongSelf.alert(message: error?.localizedDescription)
-                return
+        FirebaseAuth.Auth.auth().signIn(withEmail: tFEmail.text!, password: tFPassword.text!) { result, error in
+
+            guard let result = result, error == nil else {
+                self.alert(message: error?.localizedDescription)
+                return 
             }
             let user = result.user
             print("User details: \(user.description)")
-            strongSelf.moveToSentimentVC()
+            self.moveToSentimentVC()
         }
     }
 
