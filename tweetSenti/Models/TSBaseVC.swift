@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class TSBaseVC: UIViewController {
     // MARK: - Properties
@@ -38,10 +39,14 @@ class TSBaseVC: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
-    public func alert() {
-        let alert = UIAlertController(title: "Error", message: "Please enter a valid email address and a password of six characters or more", preferredStyle: .actionSheet)
+    public func alert(message: String? = nil) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "Close", style: .cancel)
         alert.addAction(action)
         present(alert, animated: true)
+    }
+    
+    public func popBack() {
+        navigationController?.popToRootViewController(animated: true)
     }
 }

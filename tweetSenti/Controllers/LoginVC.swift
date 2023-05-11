@@ -72,7 +72,7 @@ class LoginVC: TSBaseVC {
                 return
             }
             guard let result = result, error != nil else {
-                print("Error logging in: \(String(describing: error?.localizedDescription))")
+                strongSelf.alert(message: error?.localizedDescription)
                 return
             }
             let user = result.user

@@ -6,8 +6,8 @@
 //
 
 import CLTypingLabel
-import UIKit
 import FirebaseAuth
+import UIKit
 
 class AppLauncherVC: TSBaseVC {
     // MARK: - Properties

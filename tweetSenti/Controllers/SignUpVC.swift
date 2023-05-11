@@ -72,7 +72,7 @@ class SignUpVC: TSBaseVC {
                 return
             }
             guard let result = result, error == nil else {
-                print("error: \(String(describing: error?.localizedDescription))")
+                strongSelf.alert(message: error?.localizedDescription)
                 return
             }
             let uID = result.user.uid
