@@ -5,8 +5,8 @@
 //  Created by Adithyah Nair on 06/05/23.
 //
 
-import UIKit
 import CoreML
+import UIKit
 
 import FirebaseFirestore
 
@@ -47,7 +47,7 @@ class TSBaseVC: UIViewController {
         alert.addAction(action)
         present(alert, animated: true)
     }
-    
+
     public func popBack() {
         navigationController?.popViewController(animated: true)
     }
