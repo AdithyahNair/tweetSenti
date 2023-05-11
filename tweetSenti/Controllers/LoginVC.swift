@@ -67,10 +67,9 @@ class LoginVC: TSBaseVC {
 
     @objc func didTapContinueBtn() {
         FirebaseAuth.Auth.auth().signIn(withEmail: tFEmail.text!, password: tFPassword.text!) { result, error in
-
             guard let result = result, error == nil else {
                 self.alert(message: error?.localizedDescription)
-                return 
+                return
             }
             let user = result.user
             print("User details: \(user.description)")

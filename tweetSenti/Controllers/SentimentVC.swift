@@ -14,6 +14,7 @@ class SentimentVC: TSBaseVC {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(didTapLogOut))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Past Records", style: .done, target: self, action: #selector(didTapPastRecords))
 
 //        let userData: [String: Any] = ["text": "#apple",
 //                                       "sentiment": [
@@ -43,5 +44,9 @@ class SentimentVC: TSBaseVC {
         } catch let error as NSError {
             print("Error signout out: \(error)")
         }
+    }
+
+    @objc func didTapPastRecords() {
+        // MARK: - Todo
     }
 }

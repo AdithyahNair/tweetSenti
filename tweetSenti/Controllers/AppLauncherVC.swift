@@ -42,6 +42,12 @@ class AppLauncherVC: TSBaseVC {
     private func setUp() {
         UIView.animate(withDuration: 1) {
             self.lblTeams.alpha = 1
+            do {
+                try Auth.auth().signOut()
+
+            } catch let error as NSError {
+                print("error is: \(error)")
+            }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             if Auth.auth().currentUser != nil {
