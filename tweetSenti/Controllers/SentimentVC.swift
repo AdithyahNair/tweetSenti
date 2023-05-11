@@ -7,6 +7,8 @@
 
 import FirebaseAuth
 import FirebaseFirestore
+import SwifteriOS
+import SwiftyJSON
 import UIKit
 
 class SentimentVC: TSBaseVC {

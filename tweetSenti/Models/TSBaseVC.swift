@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import CoreML
+
 import FirebaseFirestore
 
 class TSBaseVC: UIViewController {
@@ -39,7 +41,7 @@ class TSBaseVC: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 
-    public func alert(message: String? = nil) {
+    public func alert(message: String? = "Please enter a valid email address and password with at least six characters") {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
         let action = UIAlertAction(title: "Close", style: .cancel)
         alert.addAction(action)
@@ -47,6 +49,6 @@ class TSBaseVC: UIViewController {
     }
     
     public func popBack() {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
 }
