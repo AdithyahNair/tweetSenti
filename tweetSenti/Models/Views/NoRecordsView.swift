@@ -27,7 +27,7 @@ class NoRecordsView: UIView {
     private func commitInit() {
         Bundle.main.loadNibNamed("NoRecordsView", owner: self)
         addSubview(containerView)
-        containerView.frame = bounds
+        containerView.frame = self.bounds
         containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
 }

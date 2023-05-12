@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-zx-cmk" customClass="NoRecordsView" customModule="tweetSenti" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-zx-cmk" userLabel="noRecordsView" customClass="NoRecordsView" customModule="tweetSenti" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="83" width="393" height="735"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -26,9 +26,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Zhe-zx-cmk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1cJ-OB-M2F"/>
-                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="75Y-Of-oQs"/>
+                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="75Y-Of-oQs"/>
                             <constraint firstItem="Zhe-zx-cmk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nfo-iE-sKe"/>
-                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="xi8-lF-iCf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Zhe-zx-cmk" secondAttribute="bottom" id="xi8-lF-iCf"/>
                         </constraints>
                     </view>
                     <connections>

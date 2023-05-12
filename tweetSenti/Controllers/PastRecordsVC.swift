@@ -17,7 +17,7 @@ class PastRecordsVC: UIViewController {
             noRecordsView.lblFirstTime.font = UIFont(name: "Lobster", size: 32)
             noRecordsView.lblFirstTime.textColor = UIColor.black.withAlphaComponent(0.5)
             noRecordsView.lblFirstTime.textAlignment = .center
-            noRecordsView.lblStartOver.text = "Click here to return to the previous page and start over."
+            noRecordsView.lblStartOver.text = "Click the back button to start now."
             noRecordsView.lblStartOver.numberOfLines = 0
             noRecordsView.lblStartOver.font = UIFont(name: "Lobster", size: 16)
             noRecordsView.lblStartOver.textColor = UIColor.gray.withAlphaComponent(0.5)
