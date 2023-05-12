@@ -40,10 +40,8 @@ extension SignUpVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if tFEmail.isValidEmail(email: tFEmail.text) && tFPassword.text?.count ?? 0 >= 6 {
             btnContinue.enable(value: "btnContinue")
-            btn.disable()
         } else {
             btnContinue.disable()
-            btn.enable(value: "btn")
         }
     }
 }
@@ -60,6 +58,21 @@ extension LoginVC: UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         if tFEmail.isValidEmail(email: tFEmail.text) && tFPassword.text?.count != 0 {
+            btnContinue.enable(value: "btnContinue")
+        } else {
+            btnContinue.disable()
+        }
+    }
+}
+
+extension SentimentVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        tfInputText.resignFirstResponder()
+        return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if tfInputText.text?.count != 0 {
             btnContinue.enable(value: "btnContinue")
         } else {
             btnContinue.disable()

@@ -31,6 +31,12 @@ class SentimentVC: TSBaseVC {
         }
     }
 
+    @IBOutlet var btn: UIButton! {
+        didSet {
+            btn.addTarget(self, action: #selector(didTapBtn), for: .touchUpInside)
+        }
+    }
+
     @IBOutlet var btnContinue: UIButton! {
         didSet {
             btnContinue.setTitle("Continue", for: .normal)
@@ -76,18 +82,27 @@ class SentimentVC: TSBaseVC {
     }
 
     func setUp() {
+        tfInputText.delegate = self
         navigationItem.hidesBackButton = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(didTapLogOut))
         title = "Sentimental Data"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Past Records", style: .done, target: self, action: #selector(didTapPastRecords))
+        btnContinue.disable()
     }
 
     @objc func didTapPastRecords() {
         moveToPastRecordsVC()
     }
 
+    @objc func didTapBtn() {
+        if btnContinue.isEnabled == false {
+            alert(message: "Enter a valid text.")
+        }
+    }
+
     @objc func didTapContinueBtn() {
         // MARK: - Todo
+        print(#function)
     }
 }

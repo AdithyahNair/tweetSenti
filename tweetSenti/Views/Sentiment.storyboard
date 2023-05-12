@@ -21,7 +21,7 @@
                                 <rect key="frame" x="16" y="599.66666666666663" width="361" height="32"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.bubble" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9yQ-ZM-h41">
-                                        <rect key="frame" x="0.0" y="1.3333333333333357" width="22.333333333333332" height="30.999999999999993"/>
+                                        <rect key="frame" x="0.0" y="1.3333333333333357" width="22.333333333333332" height="31"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                     </imageView>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter some text.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qLF-7a-J4G" userLabel="lblInputText">
@@ -34,6 +34,17 @@
                                     <constraint firstAttribute="height" constant="32" id="EMI-0E-icV"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpV-4f-4CN" userLabel="btn">
+                                <rect key="frame" x="16" y="748" width="361" height="54"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="RHE-wc-Pup"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <color key="baseForegroundColor" red="0.98823529480000005" green="0.98823529480000005" blue="0.98823529480000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-hH-NC4" userLabel="btnContinue">
                                 <rect key="frame" x="16" y="748" width="361" height="54"/>
                                 <color key="backgroundColor" red="0.090196078430000007" green="0.2352941036" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -61,9 +72,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DpV-4f-4CN" secondAttribute="trailing" constant="16" id="27r-ZC-jXO"/>
                             <constraint firstItem="rQ6-vo-pry" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="7TO-s3-IvX"/>
                             <constraint firstItem="rQ6-vo-pry" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="CcL-qF-AEX"/>
+                            <constraint firstItem="DpV-4f-4CN" firstAttribute="top" secondItem="rQ6-vo-pry" secondAttribute="bottom" constant="48" id="EYY-xK-l2I"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DZV-tE-bul" secondAttribute="trailing" constant="16" id="KSJ-jy-ql5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="DpV-4f-4CN" secondAttribute="bottom" constant="16" id="MR0-A0-kJ7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rQ6-vo-pry" secondAttribute="trailing" constant="16" id="Nek-rC-b5V"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wXY-81-QyB" secondAttribute="trailing" constant="16" id="PwZ-W3-ZiT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Dd2-hH-NC4" secondAttribute="bottom" constant="16" id="YTP-qj-S87"/>
@@ -74,10 +88,12 @@
                             <constraint firstItem="Dd2-hH-NC4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="qLZ-U6-kh0"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Dd2-hH-NC4" secondAttribute="trailing" constant="16" id="s0j-yL-coC"/>
                             <constraint firstItem="wXY-81-QyB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="wAq-WI-z1T"/>
+                            <constraint firstItem="DpV-4f-4CN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="xhs-iI-sv5"/>
                             <constraint firstItem="rQ6-vo-pry" firstAttribute="top" secondItem="DZV-tE-bul" secondAttribute="bottom" constant="48" id="yyJ-Ci-4JB"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btn" destination="DpV-4f-4CN" id="CJy-5O-8ka"/>
                         <outlet property="btnContinue" destination="Dd2-hH-NC4" id="zDe-3z-jNS"/>
                         <outlet property="lblStartAnalysis" destination="rQ6-vo-pry" id="MlT-IA-ddb"/>
                         <outlet property="tfInputText" destination="qLF-7a-J4G" id="Mgg-Dn-QtQ"/>
