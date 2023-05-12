@@ -12,11 +12,37 @@ import SwiftyJSON
 import UIKit
 
 class SentimentVC: TSBaseVC {
+    // MARK: - IBOutlets
+
+    @IBOutlet var tfInputText: UITextField! {
+        didSet {
+            tfInputText.addBottomBorder()
+        }
+    }
+
+    @IBOutlet var lblStartAnalysis: UILabel! {
+        didSet {
+            lblStartAnalysis.text = "Press the button below to commence your sentiment analysis journey."
+            lblStartAnalysis.numberOfLines = 0
+            lblStartAnalysis.font = UIFont(name: "Lobster", size: 16)
+            lblStartAnalysis.textColor = .gray.withAlphaComponent(0.5)
+            lblStartAnalysis.textAlignment = .center
+        }
+    }
+
+    @IBOutlet var btnContinue: UIButton! {
+        didSet {
+            btnContinue.setTitle("Continue", for: .normal)
+            btnContinue.layer.cornerRadius = 10
+            btnContinue.addTarget(self, action: #selector(didTapContinueBtn), for: .touchUpInside)
+        }
+    }
+
+    // MARK: - Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(didTapLogOut))
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Past Records", style: .done, target: self, action: #selector(didTapPastRecords))
+        setUp()
 
 //        let userData: [String: Any] = ["text": "#apple",
 //                                       "sentiment": [
@@ -48,7 +74,19 @@ class SentimentVC: TSBaseVC {
         }
     }
 
+    func setUp() {
+        navigationItem.hidesBackButton = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(didTapLogOut))
+        title = "Sentimental Data"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Past Records", style: .done, target: self, action: #selector(didTapPastRecords))
+    }
+
     @objc func didTapPastRecords() {
+        // MARK: - Todo
+    }
+
+    @objc func didTapContinueBtn() {
         // MARK: - Todo
     }
 }
