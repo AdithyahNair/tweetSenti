@@ -10,6 +10,7 @@ import FirebaseFirestore
 import SwifteriOS
 import SwiftyJSON
 import UIKit
+import NativePopup
 
 class SentimentVC: TSBaseVC {
     // MARK: - IBOutlets
@@ -83,7 +84,7 @@ class SentimentVC: TSBaseVC {
     }
 
     @objc func didTapPastRecords() {
-        // MARK: - Todo
+        NativePopup.show(image: Character("😆"), title: "Funny", message: "Sentimental analysis done")
     }
 
     @objc func didTapContinueBtn() {

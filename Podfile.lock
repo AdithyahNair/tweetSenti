@@ -709,6 +709,7 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
+  - NativePopup (2.0.1)
   - PromisesObjC (2.2.0)
   - SwiftyJSON (5.0.1)
 
@@ -717,6 +718,7 @@ DEPENDENCIES:
   - FirebaseAuth
   - FirebaseFirestore
   - IQKeyboardManagerSwift
+  - NativePopup
   - SwiftyJSON
 
 SPEC REPOS:
@@ -737,6 +739,7 @@ SPEC REPOS:
     - leveldb-library
     - Libuv-gRPC
     - nanopb
+    - NativePopup
     - PromisesObjC
     - SwiftyJSON
 
@@ -757,9 +760,10 @@ SPEC CHECKSUMS:
   leveldb-library: f03246171cce0484482ec291f88b6d563699ee06
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  NativePopup: 09811a8f5893271d7bd35ae9077f430ac11d1425
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: d6d46f8296f68585ce7e4c06851e039405189bf2
+PODFILE CHECKSUM: 018ba40b682a585496e757026973a3c366bd152d
 
 COCOAPODS: 1.12.1

@@ -9,6 +9,7 @@ pod 'FirebaseFirestore'
 pod 'CLTypingLabel', '~> 0.4'
 pod 'IQKeyboardManagerSwift'
 pod 'SwiftyJSON'
+pod 'NativePopup'
   # Pods for tweetSenti
 
 end
