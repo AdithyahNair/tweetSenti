@@ -15,6 +15,34 @@ class TSBaseVC: UIViewController {
 
     let db = Firestore.firestore()
 
+    var apiKey: String {
+        guard let filePath = Bundle.main.path(forResource: "Config", ofType: "plist") else {
+            fatalError("Couldn't find Config.plist")
+        }
+        let plist = NSDictionary(contentsOfFile: filePath)
+        guard let value = plist?.object(forKey: "apiKey") as? String else {
+            fatalError("Couldn't find API_Key in Config.plist")
+        }
+        return value
+    }
+
+    var apiSecretKey: String {
+        guard let filePath = Bundle.main.path(forResource: "Config", ofType: "plist") else {
+            fatalError("Couldn't find file 'Config.plist'.")
+        }
+        let plist = NSDictionary(contentsOfFile: filePath)
+        guard let value = plist?.object(forKey: "apiSecretKey") as? String else {
+            fatalError("Couldn't find key 'API_SecretKey' in 'Config.plist'.")
+        }
+        return value
+    }
+
+    let sentimentClassifier = try! TweetSentimentClassifier(configuration: MLModelConfiguration())
+
+    let tweetCount: Int = 100
+
+    var tweets: [TweetSentimentClassifierInput] = []
+
     // MARK: - Methods
 
     public func moveToOnboardingVC() {
@@ -47,7 +75,7 @@ class TSBaseVC: UIViewController {
         alert.addAction(action)
         present(alert, animated: true)
     }
-    
+
     public func moveToPastRecordsVC() {
         let storyBoard = UIStoryboard(name: "PastRecords", bundle: nil)
         let viewController = storyBoard.instantiateViewController(identifier: "PastRecords") as! PastRecordsVC

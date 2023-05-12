@@ -27,6 +27,8 @@
 		1475280F2A0D05F700DBB4A3 /* TweetSentimentClassifier.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 1475280E2A0D05F700DBB4A3 /* TweetSentimentClassifier.mlpackage */; };
 		148DCBB22A065E6300FE18C5 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148DCBB12A065E6300FE18C5 /* Onboarding.storyboard */; };
 		148DCBB42A065F0600FE18C5 /* TSBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148DCBB32A065F0600FE18C5 /* TSBaseVC.swift */; };
+		1499250B2A0E963000B0EDF6 /* PastRecordsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149925092A0E963000B0EDF6 /* PastRecordsTVC.swift */; };
+		1499250C2A0E963000B0EDF6 /* PastRecordsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1499250A2A0E963000B0EDF6 /* PastRecordsTVC.xib */; };
 		14B7C31A2A06509C003C8A75 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B7C3192A06509C003C8A75 /* SignUp.storyboard */; };
 		14B7C31C2A065118003C8A75 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B7C31B2A065118003C8A75 /* SignUpVC.swift */; };
 		14B82F9729FA85940085FCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B82F9629FA85940085FCAB /* AppDelegate.swift */; };
@@ -36,6 +38,7 @@
 		14B82FA029FA85960085FCAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B82F9F29FA85960085FCAB /* Assets.xcassets */; };
 		14B82FA329FA85960085FCAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B82FA129FA85960085FCAB /* LaunchScreen.storyboard */; };
 		14B82FAB29FA872A0085FCAB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14B82FAA29FA872A0085FCAB /* GoogleService-Info.plist */; };
+		14C1FE192A0E443A003DA56C /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14C1FE182A0E443A003DA56C /* Config.plist */; };
 		41C9610B8489C202789C9063 /* Pods_tweetSenti.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F862FC3A9E473F0085C153D2 /* Pods_tweetSenti.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +112,8 @@
 		1475280E2A0D05F700DBB4A3 /* TweetSentimentClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = TweetSentimentClassifier.mlpackage; sourceTree = SOURCE_ROOT; };
 		148DCBB12A065E6300FE18C5 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		148DCBB32A065F0600FE18C5 /* TSBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSBaseVC.swift; sourceTree = "<group>"; };
+		149925092A0E963000B0EDF6 /* PastRecordsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsTVC.swift; sourceTree = "<group>"; };
+		1499250A2A0E963000B0EDF6 /* PastRecordsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastRecordsTVC.xib; sourceTree = "<group>"; };
 		14B7C3192A06509C003C8A75 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		14B7C31B2A065118003C8A75 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		14B82F9329FA85940085FCAB /* tweetSenti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tweetSenti.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +125,7 @@
 		14B82FA229FA85960085FCAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14B82FA429FA85960085FCAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14B82FAA29FA872A0085FCAB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14C1FE182A0E443A003DA56C /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		97F6A2D9964A9B5A08290731 /* Pods-tweetSenti.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tweetSenti.release.xcconfig"; path = "Target Support Files/Pods-tweetSenti/Pods-tweetSenti.release.xcconfig"; sourceTree = "<group>"; };
 		F035AF1F04CDF202DF153E16 /* Pods-tweetSenti.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tweetSenti.debug.xcconfig"; path = "Target Support Files/Pods-tweetSenti/Pods-tweetSenti.debug.xcconfig"; sourceTree = "<group>"; };
 		F862FC3A9E473F0085C153D2 /* Pods_tweetSenti.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tweetSenti.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +197,8 @@
 			children = (
 				144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */,
 				144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */,
+				149925092A0E963000B0EDF6 /* PastRecordsTVC.swift */,
+				1499250A2A0E963000B0EDF6 /* PastRecordsTVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 				140E7E882A03B28100ECC289 /* Views */,
 				14B82F9F29FA85960085FCAB /* Assets.xcassets */,
 				14B82FA129FA85960085FCAB /* LaunchScreen.storyboard */,
+				14C1FE182A0E443A003DA56C /* Config.plist */,
 				14B82FA429FA85960085FCAB /* Info.plist */,
 				14B82FAA29FA872A0085FCAB /* GoogleService-Info.plist */,
 				1411AF612A03A93F00CBE4EF /* Fonts */,
@@ -376,7 +385,9 @@
 				140646172A06823A0060A450 /* Login.storyboard in Resources */,
 				1411AF632A03A95500CBE4EF /* Lobster-Regular.ttf in Resources */,
 				144B44DC2A0D4A7800BDA00F /* NoRecordsView.xib in Resources */,
+				1499250C2A0E963000B0EDF6 /* PastRecordsTVC.xib in Resources */,
 				14B82FA329FA85960085FCAB /* LaunchScreen.storyboard in Resources */,
+				14C1FE192A0E443A003DA56C /* Config.plist in Resources */,
 				144B44EE2A0DF3CE00BDA00F /* PastRecords.storyboard in Resources */,
 				14B7C31A2A06509C003C8A75 /* SignUp.storyboard in Resources */,
 				14B82FA029FA85960085FCAB /* Assets.xcassets in Resources */,
@@ -445,6 +456,7 @@
 				140646192A0682710060A450 /* LoginVC.swift in Sources */,
 				142C5B8D2A067BCD00F0F6E6 /* Extension.swift in Sources */,
 				1475280F2A0D05F700DBB4A3 /* TweetSentimentClassifier.mlpackage in Sources */,
+				1499250B2A0E963000B0EDF6 /* PastRecordsTVC.swift in Sources */,
 				14B82F9729FA85940085FCAB /* AppDelegate.swift in Sources */,
 				148DCBB42A065F0600FE18C5 /* TSBaseVC.swift in Sources */,
 				140465C72A0BC956009B3655 /* Sentiment.swift in Sources */,

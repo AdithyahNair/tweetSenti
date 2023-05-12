@@ -5,6 +5,7 @@
 //  Created by Adithyah Nair on 10/05/23.
 //
 
+import CoreML
 import FirebaseAuth
 import FirebaseFirestore
 import NativePopup
@@ -102,7 +103,68 @@ class SentimentVC: TSBaseVC {
     }
 
     @objc func didTapContinueBtn() {
-        // MARK: - Todo
-        print(#function)
+        getSentiment()
+    }
+
+    func getSentiment() {
+        fetchTweets()
+    }
+
+    func fetchTweets() {
+        let swifter = Swifter(consumerKey: apiKey, consumerSecret: apiSecretKey)
+        if let text = tfInputText.text {
+            swifter.searchTweet(using: text,
+                                lang: "en",
+                                count: tweetCount,
+                                tweetMode:
+                                .extended) { results, _ in
+                for i in 0 ..< self.tweetCount {
+                    if let tweet = results[i]["full_text"].string {
+                        let tweetForClassification = TweetSentimentClassifierInput(text: tweet)
+                        self.tweets.append(tweetForClassification)
+                    }
+                }
+                for tweet in self.tweets {
+                    print("Tweets: \(tweet.text)")
+                }
+                self.makePrediction()
+            } failure: { error in
+                print("Error searching tweets. Error: \(error)")
+            }
+        }
+    }
+
+    func makePrediction() {
+        do {
+            let predictions = try sentimentClassifier.predictions(inputs: tweets)
+            var sentimentScore = 0
+            for prediction in predictions {
+                if prediction.label == "Pos" {
+                    sentimentScore += 1
+                } else if prediction.label == "Neg" {
+                    sentimentScore -= 1
+                }
+            }
+            print("Sentiment score: \(sentimentScore)")
+            updateUI(score: sentimentScore)
+        } catch {
+            print("Error getting tweet predictions.")
+        }
+    }
+
+    func updateUI(score: Int) {
+        if score > 20 {
+            NativePopup.show(image: Character("😇"), title: "", message: "Score: \(score)")
+        } else if score > 10 {
+            NativePopup.show(image: Character("🙂"), title: "", message: "Score: \(score)")
+        } else if score > 0 {
+            NativePopup.show(image: Character("😐"), title: "", message: "Score: \(score)")
+        } else if score > -10 {
+            NativePopup.show(image: Character("😨"), title: "", message: "Score: \(score)")
+        } else if score > -20 {
+            NativePopup.show(image: Character("😡"), title: "", message: "Score: \(score)")
+        } else {
+            NativePopup.show(image: Character("🤮"), title: "", message: "Score: \(score)")
+        }
     }
 }

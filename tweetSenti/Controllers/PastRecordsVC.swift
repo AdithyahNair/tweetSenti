@@ -10,6 +10,7 @@ import UIKit
 class PastRecordsVC: UIViewController {
     // MARK: - IBOutlets
 
+    @IBOutlet weak var tvPastRecords: UITableView!
     @IBOutlet var noRecordsView: NoRecordsView! {
         didSet {
             noRecordsView.lblFirstTime.numberOfLines = 0
@@ -35,5 +36,29 @@ class PastRecordsVC: UIViewController {
     func setUp() {
         title = "Past Records"
         navigationController?.navigationBar.prefersLargeTitles = true
+        noRecordsView.isHidden = true
+        tvPastRecords.delegate = self
+        tvPastRecords.dataSource = self
+        tvPastRecords.register(UINib(nibName: "PastRecordsTVC", bundle: nil), forCellReuseIdentifier: "PastRecordsTVC")
     }
+}
+
+extension PastRecordsVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PastRecordsTVC", for: indexPath) as! PastRecordsTVC
+        let text = "Hi How are you"
+        let score = "87"
+        let description = "what are you doing"
+        let emoji = "😆".image()
+        cell.imgEmoji.image = emoji
+        cell.lblNumber.text = score
+        cell.lblText.text = text
+        return cell
+    }
+    
+    
 }
