@@ -12,7 +12,7 @@ class NoRecordsView: UIView {
 
     @IBOutlet var containerView: UIView!
     @IBOutlet var lblFirstTime: UILabel!
-    @IBOutlet var imgFirstTime: UIImageView!
+    @IBOutlet var lblStartOver: UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

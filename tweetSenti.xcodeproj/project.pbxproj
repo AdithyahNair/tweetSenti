@@ -19,7 +19,7 @@
 		144B44DC2A0D4A7800BDA00F /* NoRecordsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */; };
 		144B44E02A0D4F9F00BDA00F /* NoRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */; };
 		144B44EE2A0DF3CE00BDA00F /* PastRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144B44ED2A0DF3CE00BDA00F /* PastRecords.storyboard */; };
-		144B44F02A0DF3E800BDA00F /* PastRecordsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B44EF2A0DF3E800BDA00F /* PastRecordsVCViewController.swift */; };
+		144B44F02A0DF3E800BDA00F /* PastRecordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B44EF2A0DF3E800BDA00F /* PastRecordsVC.swift */; };
 		147527E82A0D037100DBB4A3 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 147527E72A0D037100DBB4A3 /* Swifter */; };
 		147527EA2A0D037100DBB4A3 /* Example in Frameworks */ = {isa = PBXBuildFile; productRef = 147527E92A0D037100DBB4A3 /* Example */; };
 		147527FD2A0D04BF00DBB4A3 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 147527F42A0D049200DBB4A3 /* SwifteriOS.framework */; };
@@ -104,7 +104,7 @@
 		144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoRecordsView.xib; sourceTree = "<group>"; };
 		144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordsView.swift; sourceTree = "<group>"; };
 		144B44ED2A0DF3CE00BDA00F /* PastRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastRecords.storyboard; sourceTree = "<group>"; };
-		144B44EF2A0DF3E800BDA00F /* PastRecordsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsVCViewController.swift; sourceTree = "<group>"; };
+		144B44EF2A0DF3E800BDA00F /* PastRecordsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsVC.swift; sourceTree = "<group>"; };
 		147527EB2A0D049200DBB4A3 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = ../Swifter/Swifter.xcodeproj; sourceTree = "<group>"; };
 		1475280E2A0D05F700DBB4A3 /* TweetSentimentClassifier.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = TweetSentimentClassifier.mlpackage; sourceTree = SOURCE_ROOT; };
 		148DCBB12A065E6300FE18C5 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 				14B7C31B2A065118003C8A75 /* SignUpVC.swift */,
 				140646182A0682710060A450 /* LoginVC.swift */,
 				140465C22A0BBCE9009B3655 /* SentimentVC.swift */,
-				144B44EF2A0DF3E800BDA00F /* PastRecordsVCViewController.swift */,
+				144B44EF2A0DF3E800BDA00F /* PastRecordsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -436,7 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				144B44F02A0DF3E800BDA00F /* PastRecordsVCViewController.swift in Sources */,
+				144B44F02A0DF3E800BDA00F /* PastRecordsVC.swift in Sources */,
 				14B82F9B29FA85940085FCAB /* AppLauncherVC.swift in Sources */,
 				140465C52A0BC784009B3655 /* Tweet.swift in Sources */,
 				140465C32A0BBCE9009B3655 /* SentimentVC.swift in Sources */,

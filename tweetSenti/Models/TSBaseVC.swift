@@ -47,6 +47,12 @@ class TSBaseVC: UIViewController {
         alert.addAction(action)
         present(alert, animated: true)
     }
+    
+    public func moveToPastRecordsVC() {
+        let storyBoard = UIStoryboard(name: "PastRecords", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(identifier: "PastRecords") as! PastRecordsVC
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
     public func popBack() {
         navigationController?.popViewController(animated: true)
