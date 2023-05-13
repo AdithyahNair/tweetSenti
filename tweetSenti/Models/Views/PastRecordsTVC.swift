@@ -22,7 +22,6 @@ class PastRecordsTVC:
 
     @IBOutlet var lblText: UILabel! {
         didSet {
-            lblText.numberOfLines = 0
             lblText.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
             lblText.textColor = .black
         }
@@ -30,7 +29,6 @@ class PastRecordsTVC:
 
     @IBOutlet var lblSentimentScore: UILabel! {
         didSet {
-            lblSentimentScore.numberOfLines = 0
             lblSentimentScore.font = UIFont.systemFont(ofSize: 12)
             lblSentimentScore.textColor = .black.withAlphaComponent(0.5)
             lblSentimentScore.textColor = .black
@@ -39,7 +37,6 @@ class PastRecordsTVC:
 
     @IBOutlet var lblTimeStamp: UILabel! {
         didSet {
-            lblTimeStamp.numberOfLines = 0
             lblTimeStamp.font = UIFont.systemFont(ofSize: 12)
             lblTimeStamp.textColor = .black.withAlphaComponent(0.5)
         }

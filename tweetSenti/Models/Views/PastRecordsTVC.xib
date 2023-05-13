@@ -26,15 +26,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moonphase.new.moon" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vxg-VE-lpo" userLabel="imgEmoji">
-                        <rect key="frame" x="69" y="11" width="64" height="62.666666666666671"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="64" id="CkQ-w3-cxH"/>
-                            <constraint firstAttribute="width" constant="64" id="JVs-Z6-LQO"/>
-                        </constraints>
-                    </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XGJ-Qh-mjo">
-                        <rect key="frame" x="150" y="23" width="281.66666666666674" height="51"/>
+                        <rect key="frame" x="150.00000000000003" y="23" width="281.66666666666674" height="51"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaB-5i-NFV" userLabel="lblText">
                                 <rect key="frame" x="0.0" y="0.0" width="281.66666666666669" height="20.333333333333332"/>
@@ -56,19 +49,26 @@
                             </label>
                         </subviews>
                     </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moonphase.new.moon" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vxg-VE-lpo" userLabel="imgEmoji">
+                        <rect key="frame" x="57" y="9" width="64" height="62.666666666666671"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="CkQ-w3-cxH"/>
+                            <constraint firstAttribute="width" constant="64" id="JVs-Z6-LQO"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="XGJ-Qh-mjo" firstAttribute="leading" secondItem="vxg-VE-lpo" secondAttribute="trailing" constant="17" id="6iX-UK-k0s"/>
-                    <constraint firstItem="XGJ-Qh-mjo" firstAttribute="leading" secondItem="vxg-VE-lpo" secondAttribute="trailing" constant="17" id="8xJ-Ip-quP"/>
+                    <constraint firstItem="XGJ-Qh-mjo" firstAttribute="leading" secondItem="vxg-VE-lpo" secondAttribute="trailing" constant="29.000000000000028" id="6iX-UK-k0s"/>
+                    <constraint firstItem="XGJ-Qh-mjo" firstAttribute="leading" secondItem="vxg-VE-lpo" secondAttribute="trailing" constant="29.000000000000028" id="8xJ-Ip-quP"/>
                     <constraint firstItem="BrD-Pl-wxH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="37" id="9oa-Yl-ldD"/>
-                    <constraint firstItem="vxg-VE-lpo" firstAttribute="leading" secondItem="BrD-Pl-wxH" secondAttribute="trailing" constant="14" id="Ppr-um-nBl"/>
+                    <constraint firstItem="vxg-VE-lpo" firstAttribute="leading" secondItem="BrD-Pl-wxH" secondAttribute="trailing" constant="2" id="Ppr-um-nBl"/>
                     <constraint firstItem="XGJ-Qh-mjo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="TNO-em-MBZ"/>
-                    <constraint firstItem="vxg-VE-lpo" firstAttribute="leading" secondItem="BrD-Pl-wxH" secondAttribute="trailing" constant="14" id="Z7l-Mp-t5a"/>
+                    <constraint firstItem="vxg-VE-lpo" firstAttribute="leading" secondItem="BrD-Pl-wxH" secondAttribute="trailing" constant="2" id="Z7l-Mp-t5a"/>
                     <constraint firstAttribute="trailing" secondItem="XGJ-Qh-mjo" secondAttribute="trailing" constant="11.333333333333258" id="hAj-Qj-FnH"/>
-                    <constraint firstItem="vxg-VE-lpo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10.000000000000002" id="iSs-4O-kwK"/>
+                    <constraint firstItem="vxg-VE-lpo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8.0000000000000018" id="iSs-4O-kwK"/>
                     <constraint firstAttribute="bottom" secondItem="BrD-Pl-wxH" secondAttribute="bottom" constant="36.333333333333329" id="jPA-Pp-yKg"/>
                     <constraint firstAttribute="bottom" secondItem="XGJ-Qh-mjo" secondAttribute="bottom" constant="22" id="nCc-15-A6e"/>
-                    <constraint firstAttribute="bottom" secondItem="vxg-VE-lpo" secondAttribute="bottom" constant="22" id="p1E-Iy-9sh"/>
+                    <constraint firstAttribute="bottom" secondItem="vxg-VE-lpo" secondAttribute="bottom" constant="24" id="p1E-Iy-9sh"/>
                     <constraint firstItem="BrD-Pl-wxH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="xoY-9a-QKN"/>
                 </constraints>
             </tableViewCellContentView>

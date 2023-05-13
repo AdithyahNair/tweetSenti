@@ -71,8 +71,7 @@ class LoginVC: TSBaseVC {
                 self.alert(message: error?.localizedDescription)
                 return
             }
-            let user = result.user
-            print("User details: \(user.description)")
+            UserDefaults.standard.set(result.user.uid, forKey: "uID")
             self.moveToSentimentVC()
         }
     }

@@ -13,11 +13,11 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="PastRecords" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PastRecordsVC" customModule="tweetSenti" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-zx-cmk" userLabel="noRecordsView" customClass="NoRecordsView" customModule="tweetSenti" customModuleProvider="target">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-zx-cmk" userLabel="noRecordsView" customClass="NoRecordsView" customModule="tweetSenti" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="83" width="393" height="735"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -37,6 +37,7 @@
                             <constraint firstItem="ROd-Xm-qN0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4Ev-zn-M60"/>
                             <constraint firstItem="Zhe-zx-cmk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="75Y-Of-oQs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ROd-Xm-qN0" secondAttribute="trailing" constant="16" id="Zuo-0v-uRl"/>
+                            <constraint firstAttribute="bottom" secondItem="ROd-Xm-qN0" secondAttribute="bottom" id="e3D-1k-sHa"/>
                             <constraint firstItem="Zhe-zx-cmk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nfo-iE-sKe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Zhe-zx-cmk" secondAttribute="bottom" id="xi8-lF-iCf"/>
                         </constraints>

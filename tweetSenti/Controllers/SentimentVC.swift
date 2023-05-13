@@ -51,26 +51,6 @@ class SentimentVC: TSBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-
-//        let userData: [String: Any] = ["text": "#apple",
-//                                       "sentiment": [
-//                                           "score": 87,
-//                                           "date": Timestamp(date: Date()),
-//                                           "emojiState": "Very Happy",
-//                                       ] as [String: Any]]
-//        let uID = UserDefaults.standard.string(forKey: "uID")
-//        db.collection("users").document(uID!).collection("tweet").addDocument(data: ["text": "#apple"]).collection("sentiment").addDocument(data: ["sentiment": [
-//            "score": 87,
-//            "date": Timestamp(date: Date()),
-//            "emojiState": "Very Happy",
-//        ] as [String: Any]]) {
-//            err in
-//            if let err = err {
-//                print("Error is: \(err)")
-//            } else {
-//                print("Successfully stored data")
-//            }
-//        }
     }
 
     @objc func didTapLogOut() {
@@ -192,11 +172,8 @@ class SentimentVC: TSBaseVC {
         let date = dateFormatter.string(from: Date())
 
         let uID = UserDefaults.standard.string(forKey: "uID")
-        db.collection("users").document(uID!).collection("tweet").addDocument(data: ["text": text!]).collection("sentiment").addDocument(data: ["sentiment": [
-            "score": "Score: \(score)",
-            "date": date,
-            "emojiState": returnEmoji(score: score),
-        ] as [String: Any]]) {
+        db.collection("users").document(uID!)
+            .collection("tweet").addDocument(data: ["text": text!, "score": score, "date": date, "emoji": returnEmoji(score: score)]) {
             err in
             if let err = err {
                 print("Error is: \(err)")

@@ -110,3 +110,23 @@ extension String {
         return image
     }
 }
+
+extension PastRecordsVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        tweetArray.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PastRecordsTVC", for: indexPath) as! PastRecordsTVC
+        cell.imgEmoji.image = tweetArray[indexPath.row].sentiment.emoji
+        cell.lblNumber.text = "\(indexPath.row + 1)"
+        cell.lblText.text = tweetArray[indexPath.row].text
+        cell.lblSentimentScore.text = "Sentiment Score: \(tweetArray[indexPath.row].sentiment.score)"
+        cell.lblTimeStamp.text = tweetArray[indexPath.row].sentiment.date
+        return cell
+    }
+}

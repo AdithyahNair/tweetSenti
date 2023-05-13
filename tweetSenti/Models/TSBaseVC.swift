@@ -42,8 +42,8 @@ class TSBaseVC: UIViewController {
     let tweetCount: Int = 100
 
     var tweets: [TweetSentimentClassifierInput] = []
-    
-    var tweetArray: [Tweet] = []
+
+    let uID = UserDefaults.standard.string(forKey: "uID")
 
     // MARK: - Methods
 

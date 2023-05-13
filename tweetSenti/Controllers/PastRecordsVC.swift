@@ -5,9 +5,12 @@
 //  Created by Adithyah Nair on 12/05/23.
 //
 
+import FirebaseFirestore
 import UIKit
 
 class PastRecordsVC: TSBaseVC {
+    var tweetArray: [Tweet] = []
+
     // MARK: - IBOutlets
 
     @IBOutlet var tableViewHeight: NSLayoutConstraint!
@@ -32,40 +35,54 @@ class PastRecordsVC: TSBaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
         setUp()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadTweets()
     }
 
     override func viewWillLayoutSubviews() {
         tableViewHeight.constant = CGFloat(tableView.numberOfRows(inSection: 0) * 96)
-        
     }
 
     func setUp() {
         title = "Past Records"
         navigationController?.navigationBar.prefersLargeTitles = true
         noRecordsView.isHidden = true
-        tableView.delegate = self
-        tableView.dataSource = self
         tableView.register(UINib(nibName: "PastRecordsTVC", bundle: nil), forCellReuseIdentifier: "PastRecordsTVC")
         tableView.layer.cornerRadius = 10
-        tableView.reloadData()
-    }
-}
-
-extension PastRecordsVC: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tweetArray.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PastRecordsTVC", for: indexPath) as! PastRecordsTVC
-//        let text = "Hi How are you"
-//        let score = "87"
-//        let description = "what are you doing"
-//        let emoji = "😆".image()
-//        cell.imgEmoji.image = emoji
-//        cell.lblNumber.text = score
-//        cell.lblText.text = text
-        return cell
+    func loadTweets() {
+        db.collection("users").document(uID!).collection("tweet")
+            .order(by: "date").addSnapshotListener { querySnapshot, error in
+            self.tweetArray = []
+            if let error = error {
+                print("There was an issue in retrieving data: \(error.localizedDescription)")
+            } else {
+                if let snapshotDocuments = querySnapshot?.documents {
+                    for document in snapshotDocuments {
+                        let data = document.data()
+                        let text = data["text"] as! String
+                        let date = data["date"] as! String
+                        let emojiString = data["emoji"] as! String
+                        let emoji = emojiString.image()
+                        let score = data["score"] as! Int
+                        let tweet = Tweet(text: text, sentiment: Sentiment(score: score, date: date, emoji: emoji!))
+                        self.tweetArray.append(tweet)
+                    }
+
+                    print("Tweet Array: \(self.tweetArray)")
+
+                    self.tableView.reloadData()
+
+                    let indexPath = IndexPath(row: self.tweetArray.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
+                }
+            }
+        }
     }
 }
