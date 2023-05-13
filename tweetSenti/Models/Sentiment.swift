@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 struct Sentiment {
     let score: Int
-    let date: Date
-    let emoji: String
+    let date: String
+    let emoji: UIImage
 }

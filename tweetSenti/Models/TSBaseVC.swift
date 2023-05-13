@@ -42,6 +42,8 @@ class TSBaseVC: UIViewController {
     let tweetCount: Int = 100
 
     var tweets: [TweetSentimentClassifierInput] = []
+    
+    var tweetArray: [Tweet] = []
 
     // MARK: - Methods
 

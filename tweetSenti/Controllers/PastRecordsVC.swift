@@ -7,10 +7,12 @@
 
 import UIKit
 
-class PastRecordsVC: UIViewController {
+class PastRecordsVC: TSBaseVC {
     // MARK: - IBOutlets
 
-    @IBOutlet weak var tvPastRecords: UITableView!
+    @IBOutlet var tableViewHeight: NSLayoutConstraint!
+
+    @IBOutlet var tableView: UITableView!
     @IBOutlet var noRecordsView: NoRecordsView! {
         didSet {
             noRecordsView.lblFirstTime.numberOfLines = 0
@@ -33,32 +35,37 @@ class PastRecordsVC: UIViewController {
         setUp()
     }
 
+    override func viewWillLayoutSubviews() {
+        tableViewHeight.constant = CGFloat(tableView.numberOfRows(inSection: 0) * 96)
+        
+    }
+
     func setUp() {
         title = "Past Records"
         navigationController?.navigationBar.prefersLargeTitles = true
         noRecordsView.isHidden = true
-        tvPastRecords.delegate = self
-        tvPastRecords.dataSource = self
-        tvPastRecords.register(UINib(nibName: "PastRecordsTVC", bundle: nil), forCellReuseIdentifier: "PastRecordsTVC")
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "PastRecordsTVC", bundle: nil), forCellReuseIdentifier: "PastRecordsTVC")
+        tableView.layer.cornerRadius = 10
+        tableView.reloadData()
     }
 }
 
 extension PastRecordsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        tweetArray.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PastRecordsTVC", for: indexPath) as! PastRecordsTVC
-        let text = "Hi How are you"
-        let score = "87"
-        let description = "what are you doing"
-        let emoji = "😆".image()
-        cell.imgEmoji.image = emoji
-        cell.lblNumber.text = score
-        cell.lblText.text = text
+//        let text = "Hi How are you"
+//        let score = "87"
+//        let description = "what are you doing"
+//        let emoji = "😆".image()
+//        cell.imgEmoji.image = emoji
+//        cell.lblNumber.text = score
+//        cell.lblText.text = text
         return cell
     }
-    
-    
 }

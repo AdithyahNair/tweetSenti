@@ -147,8 +147,25 @@ class SentimentVC: TSBaseVC {
             }
             print("Sentiment score: \(sentimentScore)")
             updateUI(score: sentimentScore)
+            storeData(score: sentimentScore)
         } catch {
             print("Error getting tweet predictions.")
+        }
+    }
+
+    func returnEmoji(score: Int) -> String {
+        if score > 20 {
+            return "😇"
+        } else if score > 10 {
+            return "🙂"
+        } else if score > 0 {
+            return "😐"
+        } else if score > -10 {
+            return "😨"
+        } else if score > -20 {
+            return "😡"
+        } else {
+            return "🤮"
         }
     }
 
@@ -165,6 +182,27 @@ class SentimentVC: TSBaseVC {
             NativePopup.show(image: Character("😡"), title: "", message: "Score: \(score)")
         } else {
             NativePopup.show(image: Character("🤮"), title: "", message: "Score: \(score)")
+        }
+    }
+
+    func storeData(score: Int) {
+        let text = tfInputText.text
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM d, yyyy"
+        let date = dateFormatter.string(from: Date())
+
+        let uID = UserDefaults.standard.string(forKey: "uID")
+        db.collection("users").document(uID!).collection("tweet").addDocument(data: ["text": text!]).collection("sentiment").addDocument(data: ["sentiment": [
+            "score": "Score: \(score)",
+            "date": date,
+            "emojiState": returnEmoji(score: score),
+        ] as [String: Any]]) {
+            err in
+            if let err = err {
+                print("Error is: \(err)")
+            } else {
+                print("Successfully stored data")
+            }
         }
     }
 }

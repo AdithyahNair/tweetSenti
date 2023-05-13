@@ -11,22 +11,46 @@ class PastRecordsTVC:
     UITableViewCell {
     // MARK: - IBOutlets
 
-    @IBOutlet var lblNumber: UILabel!
+    @IBOutlet var lblNumber: UILabel! {
+        didSet {
+            lblNumber.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+            lblNumber.textColor = .black
+        }
+    }
 
     @IBOutlet var imgEmoji: UIImageView!
 
-    @IBOutlet var lblText: UILabel!
+    @IBOutlet var lblText: UILabel! {
+        didSet {
+            lblText.numberOfLines = 0
+            lblText.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+            lblText.textColor = .black
+        }
+    }
 
-    @IBOutlet var lblMetaText: UILabel!
-    @IBOutlet var lblSentimentScore: UILabel!
+    @IBOutlet var lblSentimentScore: UILabel! {
+        didSet {
+            lblSentimentScore.numberOfLines = 0
+            lblSentimentScore.font = UIFont.systemFont(ofSize: 12)
+            lblSentimentScore.textColor = .black.withAlphaComponent(0.5)
+            lblSentimentScore.textColor = .black
+        }
+    }
+
+    @IBOutlet var lblTimeStamp: UILabel! {
+        didSet {
+            lblTimeStamp.numberOfLines = 0
+            lblTimeStamp.font = UIFont.systemFont(ofSize: 12)
+            lblTimeStamp.textColor = .black.withAlphaComponent(0.5)
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        isUserInteractionEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 }

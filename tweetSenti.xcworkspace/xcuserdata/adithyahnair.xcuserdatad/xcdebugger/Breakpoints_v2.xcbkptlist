@@ -3,4 +3,69 @@
    uuid = "DFCA138F-346C-4BA3-97B0-2C4F1505C6BC"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0F3A0DD-7CBE-449C-B8EA-0CBA114ECBA1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tweetSenti/Controllers/PastRecordsVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "viewWillLayoutSubviews()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0F3A0DD-7CBE-449C-B8EA-0CBA114ECBA1 - 198079a1252efacd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tweetSenti.PastRecordsVC.viewWillLayoutSubviews() -&gt; ()"
+                  moduleName = "tweetSenti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adithyahnair/Downloads/tweetSenti/tweetSenti/Controllers/PastRecordsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "524">
+               </Location>
+               <Location
+                  uuid = "B0F3A0DD-7CBE-449C-B8EA-0CBA114ECBA1 - f3cc7cb5ef17b13a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tweetSenti.PastRecordsVC.setUp() -&gt; ()"
+                  moduleName = "tweetSenti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adithyahnair/Downloads/tweetSenti/tweetSenti/Controllers/PastRecordsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "532">
+               </Location>
+               <Location
+                  uuid = "B0F3A0DD-7CBE-449C-B8EA-0CBA114ECBA1 - 198079a1252efaea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tweetSenti.PastRecordsVC.viewWillLayoutSubviews() -&gt; ()"
+                  moduleName = "tweetSenti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/adithyahnair/Downloads/tweetSenti/tweetSenti/Controllers/PastRecordsVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "524">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

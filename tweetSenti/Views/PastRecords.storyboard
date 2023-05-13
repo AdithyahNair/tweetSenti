@@ -21,24 +21,30 @@
                                 <rect key="frame" x="0.0" y="83" width="393" height="735"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ROd-Xm-qN0" userLabel="pastRecordsTV">
-                                <rect key="frame" x="0.0" y="58" width="393" height="735"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ROd-Xm-qN0" userLabel="tableView">
+                                <rect key="frame" x="16" y="59" width="361" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="852" id="Xgq-4R-w00"/>
+                                </constraints>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Zhe-zx-cmk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1cJ-OB-M2F"/>
+                            <constraint firstItem="ROd-Xm-qN0" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="1kG-4E-Zet"/>
+                            <constraint firstItem="ROd-Xm-qN0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4Ev-zn-M60"/>
                             <constraint firstItem="Zhe-zx-cmk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="75Y-Of-oQs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ROd-Xm-qN0" secondAttribute="trailing" constant="16" id="Zuo-0v-uRl"/>
                             <constraint firstItem="Zhe-zx-cmk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nfo-iE-sKe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Zhe-zx-cmk" secondAttribute="bottom" id="xi8-lF-iCf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="noRecordsView" destination="Zhe-zx-cmk" id="jgQ-qH-DDJ"/>
-                        <outlet property="tvPastRecords" destination="ROd-Xm-qN0" id="RtI-gk-Zz0"/>
+                        <outlet property="tableView" destination="ROd-Xm-qN0" id="RtI-gk-Zz0"/>
+                        <outlet property="tableViewHeight" destination="Xgq-4R-w00" id="RUf-Tb-Q9a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
