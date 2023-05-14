@@ -74,11 +74,10 @@ class PastRecordsVC: TSBaseVC {
                             let tweet = Tweet(text: text, sentiment: Sentiment(score: score, date: date, emoji: emoji!))
                             self.tweetArray.append(tweet)
                             tableView.isHidden = false
+                            self.tableView.reloadData()
+                            let indexPath = IndexPath(row: self.tweetArray.count - 1, section: 0)
+                            self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                         }
-
-                        self.tableView.reloadData()
-                        let indexPath = IndexPath(row: self.tweetArray.count - 1, section: 0)
-                        self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                     }
                 }
             }

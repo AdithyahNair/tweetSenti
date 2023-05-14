@@ -51,6 +51,7 @@ class SentimentVC: TSBaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        print("UserID: \(UserDefaults.standard.string(forKey: "uID"))")
     }
 
     @objc func didTapLogOut() {
