@@ -32,14 +32,18 @@ class AppLauncherVC: TSBaseVC {
     // MARK: - Methods
 
     override func viewDidLoad() {
-        lblAppName.onTypingAnimationFinished = {
-            self.setUp()
-        }
+        super.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        setUp()
     }
 
     private func setUp() {
-        UIView.animate(withDuration: 1) {
-            self.lblTeams.alpha = 1
+        lblAppName.onTypingAnimationFinished = {
+            UIView.animate(withDuration: 1) {
+                self.lblTeams.alpha = 1
+            }
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
             if Auth.auth().currentUser != nil {
@@ -50,3 +54,5 @@ class AppLauncherVC: TSBaseVC {
         }
     }
 }
+
+//
