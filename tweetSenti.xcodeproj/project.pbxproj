@@ -17,7 +17,6 @@
 		141E4A422A056AFE00E58411 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E4A412A056AFE00E58411 /* OnboardingVC.swift */; };
 		142C5B8D2A067BCD00F0F6E6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C5B8C2A067BCD00F0F6E6 /* Extension.swift */; };
 		143FBA332A111F1F002F5FA1 /* tweetSentiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA322A111F1F002F5FA1 /* tweetSentiTests.swift */; };
-		143FBA3A2A111F2F002F5FA1 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA392A111F2F002F5FA1 /* UnitTest.swift */; };
 		144B44DC2A0D4A7800BDA00F /* NoRecordsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */; };
 		144B44E02A0D4F9F00BDA00F /* NoRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */; };
 		144B44EE2A0DF3CE00BDA00F /* PastRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144B44ED2A0DF3CE00BDA00F /* PastRecords.storyboard */; };
@@ -115,7 +114,6 @@
 		142C5B8C2A067BCD00F0F6E6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		143FBA302A111F1F002F5FA1 /* tweetSentiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tweetSentiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		143FBA322A111F1F002F5FA1 /* tweetSentiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetSentiTests.swift; sourceTree = "<group>"; };
-		143FBA392A111F2F002F5FA1 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
 		144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoRecordsView.xib; sourceTree = "<group>"; };
 		144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordsView.swift; sourceTree = "<group>"; };
 		144B44ED2A0DF3CE00BDA00F /* PastRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastRecords.storyboard; sourceTree = "<group>"; };
@@ -211,14 +209,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		143FBA2B2A111EA7002F5FA1 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				143FBA392A111F2F002F5FA1 /* UnitTest.swift */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		143FBA312A111F1F002F5FA1 /* tweetSentiTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +264,6 @@
 		14B82F9529FA85940085FCAB /* tweetSenti */ = {
 			isa = PBXGroup;
 			children = (
-				143FBA2B2A111EA7002F5FA1 /* Tests */,
 				1475280E2A0D05F700DBB4A3 /* TweetSentimentClassifier.mlpackage */,
 				14B82F9629FA85940085FCAB /* AppDelegate.swift */,
 				14B82F9829FA85940085FCAB /* SceneDelegate.swift */,
@@ -516,7 +505,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				143FBA332A111F1F002F5FA1 /* tweetSentiTests.swift in Sources */,
-				143FBA3A2A111F2F002F5FA1 /* UnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
