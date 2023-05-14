@@ -16,6 +16,8 @@
 		1411AF632A03A95500CBE4EF /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */; };
 		141E4A422A056AFE00E58411 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E4A412A056AFE00E58411 /* OnboardingVC.swift */; };
 		142C5B8D2A067BCD00F0F6E6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C5B8C2A067BCD00F0F6E6 /* Extension.swift */; };
+		143FBA332A111F1F002F5FA1 /* tweetSentiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA322A111F1F002F5FA1 /* tweetSentiTests.swift */; };
+		143FBA3A2A111F2F002F5FA1 /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA392A111F2F002F5FA1 /* UnitTest.swift */; };
 		144B44DC2A0D4A7800BDA00F /* NoRecordsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */; };
 		144B44E02A0D4F9F00BDA00F /* NoRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */; };
 		144B44EE2A0DF3CE00BDA00F /* PastRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144B44ED2A0DF3CE00BDA00F /* PastRecords.storyboard */; };
@@ -43,6 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		143FBA342A111F1F002F5FA1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14B82F8B29FA85940085FCAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14B82F9229FA85940085FCAB;
+			remoteInfo = tweetSenti;
+		};
 		147527F32A0D049200DBB4A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 147527EB2A0D049200DBB4A3 /* Swifter.xcodeproj */;
@@ -104,6 +113,9 @@
 		1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		141E4A412A056AFE00E58411 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		142C5B8C2A067BCD00F0F6E6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		143FBA302A111F1F002F5FA1 /* tweetSentiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tweetSentiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		143FBA322A111F1F002F5FA1 /* tweetSentiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetSentiTests.swift; sourceTree = "<group>"; };
+		143FBA392A111F2F002F5FA1 /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
 		144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoRecordsView.xib; sourceTree = "<group>"; };
 		144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordsView.swift; sourceTree = "<group>"; };
 		144B44ED2A0DF3CE00BDA00F /* PastRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastRecords.storyboard; sourceTree = "<group>"; };
@@ -132,6 +144,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		143FBA2D2A111F1F002F5FA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14B82F9029FA85940085FCAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +211,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		143FBA2B2A111EA7002F5FA1 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA392A111F2F002F5FA1 /* UnitTest.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		143FBA312A111F1F002F5FA1 /* tweetSentiTests */ = {
+			isa = PBXGroup;
+			children = (
+				143FBA322A111F1F002F5FA1 /* tweetSentiTests.swift */,
+			);
+			path = tweetSentiTests;
+			sourceTree = "<group>";
+		};
 		144B44DE2A0D4F8300BDA00F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +255,7 @@
 			children = (
 				147527EB2A0D049200DBB4A3 /* Swifter.xcodeproj */,
 				14B82F9529FA85940085FCAB /* tweetSenti */,
+				143FBA312A111F1F002F5FA1 /* tweetSentiTests */,
 				14B82F9429FA85940085FCAB /* Products */,
 				DC3E6376B8D04433DC356A2E /* Pods */,
 				401E5D23F61D2DE99124BB83 /* Frameworks */,
@@ -230,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				14B82F9329FA85940085FCAB /* tweetSenti.app */,
+				143FBA302A111F1F002F5FA1 /* tweetSentiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,6 +274,7 @@
 		14B82F9529FA85940085FCAB /* tweetSenti */ = {
 			isa = PBXGroup;
 			children = (
+				143FBA2B2A111EA7002F5FA1 /* Tests */,
 				1475280E2A0D05F700DBB4A3 /* TweetSentimentClassifier.mlpackage */,
 				14B82F9629FA85940085FCAB /* AppDelegate.swift */,
 				14B82F9829FA85940085FCAB /* SceneDelegate.swift */,
@@ -273,6 +311,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		143FBA2F2A111F1F002F5FA1 /* tweetSentiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 143FBA362A111F1F002F5FA1 /* Build configuration list for PBXNativeTarget "tweetSentiTests" */;
+			buildPhases = (
+				143FBA2C2A111F1F002F5FA1 /* Sources */,
+				143FBA2D2A111F1F002F5FA1 /* Frameworks */,
+				143FBA2E2A111F1F002F5FA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				143FBA352A111F1F002F5FA1 /* PBXTargetDependency */,
+			);
+			name = tweetSentiTests;
+			productName = tweetSentiTests;
+			productReference = 143FBA302A111F1F002F5FA1 /* tweetSentiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		14B82F9229FA85940085FCAB /* tweetSenti */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14B82FA729FA85960085FCAB /* Build configuration list for PBXNativeTarget "tweetSenti" */;
@@ -304,9 +360,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					143FBA2F2A111F1F002F5FA1 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 14B82F9229FA85940085FCAB;
+					};
 					14B82F9229FA85940085FCAB = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -335,6 +395,7 @@
 			projectRoot = "";
 			targets = (
 				14B82F9229FA85940085FCAB /* tweetSenti */,
+				143FBA2F2A111F1F002F5FA1 /* tweetSentiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -378,6 +439,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		143FBA2E2A111F1F002F5FA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14B82F9129FA85940085FCAB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -443,6 +511,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		143FBA2C2A111F1F002F5FA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				143FBA332A111F1F002F5FA1 /* tweetSentiTests.swift in Sources */,
+				143FBA3A2A111F2F002F5FA1 /* UnitTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14B82F8F29FA85940085FCAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,6 +544,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		143FBA352A111F1F002F5FA1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14B82F9229FA85940085FCAB /* tweetSenti */;
+			targetProxy = 143FBA342A111F1F002F5FA1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		14B82F9C29FA85940085FCAB /* AppLaunch.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -487,6 +572,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		143FBA372A111F1F002F5FA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 873GG57D8S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adithyahnair.tweetSentiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tweetSenti.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tweetSenti";
+			};
+			name = Debug;
+		};
+		143FBA382A111F1F002F5FA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 873GG57D8S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.adithyahnair.tweetSentiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tweetSenti.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/tweetSenti";
+			};
+			name = Release;
+		};
 		14B82FA529FA85960085FCAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -612,6 +735,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 873GG57D8S;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -642,6 +766,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 873GG57D8S;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -666,6 +791,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		143FBA362A111F1F002F5FA1 /* Build configuration list for PBXNativeTarget "tweetSentiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				143FBA372A111F1F002F5FA1 /* Debug */,
+				143FBA382A111F1F002F5FA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		14B82F8E29FA85940085FCAB /* Build configuration list for PBXProject "tweetSenti" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
