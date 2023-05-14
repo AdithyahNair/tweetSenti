@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zhe-zx-cmk" userLabel="noRecordsView" customClass="NoRecordsView" customModule="tweetSenti" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="83" width="393" height="735"/>
+                                <rect key="frame" x="0.0" y="24" width="393" height="794"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ROd-Xm-qN0" userLabel="tableView">
@@ -32,14 +32,14 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.94901960784313721" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="1cJ-OB-M2F"/>
                             <constraint firstItem="ROd-Xm-qN0" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="1kG-4E-Zet"/>
                             <constraint firstItem="ROd-Xm-qN0" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="4Ev-zn-M60"/>
-                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="75Y-Of-oQs"/>
+                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Egu-0s-eAP"/>
+                            <constraint firstAttribute="bottom" secondItem="Zhe-zx-cmk" secondAttribute="bottom" id="Flv-JH-5Vl"/>
+                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Prq-BP-hyi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ROd-Xm-qN0" secondAttribute="trailing" constant="16" id="Zuo-0v-uRl"/>
                             <constraint firstAttribute="bottom" secondItem="ROd-Xm-qN0" secondAttribute="bottom" id="e3D-1k-sHa"/>
-                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nfo-iE-sKe"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Zhe-zx-cmk" secondAttribute="bottom" id="xi8-lF-iCf"/>
+                            <constraint firstItem="Zhe-zx-cmk" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sf3-90-EzP"/>
                         </constraints>
                     </view>
                     <connections>
