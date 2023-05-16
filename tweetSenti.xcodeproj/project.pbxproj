@@ -15,8 +15,9 @@
 		140646192A0682710060A450 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140646182A0682710060A450 /* LoginVC.swift */; };
 		1411AF632A03A95500CBE4EF /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */; };
 		141E4A422A056AFE00E58411 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141E4A412A056AFE00E58411 /* OnboardingVC.swift */; };
+		142018962A13547400E7AF53 /* testsPastRecordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142018952A13547400E7AF53 /* testsPastRecordsVC.swift */; };
 		142C5B8D2A067BCD00F0F6E6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142C5B8C2A067BCD00F0F6E6 /* Extension.swift */; };
-		143FBA332A111F1F002F5FA1 /* tweetSentiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA322A111F1F002F5FA1 /* tweetSentiTests.swift */; };
+		143FBA332A111F1F002F5FA1 /* testsSentimentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143FBA322A111F1F002F5FA1 /* testsSentimentVC.swift */; };
 		144B44DC2A0D4A7800BDA00F /* NoRecordsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */; };
 		144B44E02A0D4F9F00BDA00F /* NoRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */; };
 		144B44EE2A0DF3CE00BDA00F /* PastRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 144B44ED2A0DF3CE00BDA00F /* PastRecords.storyboard */; };
@@ -111,9 +112,10 @@
 		140646182A0682710060A450 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		1411AF622A03A95500CBE4EF /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		141E4A412A056AFE00E58411 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		142018952A13547400E7AF53 /* testsPastRecordsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsPastRecordsVC.swift; sourceTree = "<group>"; };
 		142C5B8C2A067BCD00F0F6E6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		143FBA302A111F1F002F5FA1 /* tweetSentiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tweetSentiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		143FBA322A111F1F002F5FA1 /* tweetSentiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tweetSentiTests.swift; sourceTree = "<group>"; };
+		143FBA322A111F1F002F5FA1 /* testsSentimentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testsSentimentVC.swift; sourceTree = "<group>"; };
 		144B44DB2A0D4A7800BDA00F /* NoRecordsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoRecordsView.xib; sourceTree = "<group>"; };
 		144B44DF2A0D4F9F00BDA00F /* NoRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRecordsView.swift; sourceTree = "<group>"; };
 		144B44ED2A0DF3CE00BDA00F /* PastRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PastRecords.storyboard; sourceTree = "<group>"; };
@@ -212,7 +214,8 @@
 		143FBA312A111F1F002F5FA1 /* tweetSentiTests */ = {
 			isa = PBXGroup;
 			children = (
-				143FBA322A111F1F002F5FA1 /* tweetSentiTests.swift */,
+				143FBA322A111F1F002F5FA1 /* testsSentimentVC.swift */,
+				142018952A13547400E7AF53 /* testsPastRecordsVC.swift */,
 			);
 			path = tweetSentiTests;
 			sourceTree = "<group>";
@@ -504,7 +507,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				143FBA332A111F1F002F5FA1 /* tweetSentiTests.swift in Sources */,
+				143FBA332A111F1F002F5FA1 /* testsSentimentVC.swift in Sources */,
+				142018962A13547400E7AF53 /* testsPastRecordsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
