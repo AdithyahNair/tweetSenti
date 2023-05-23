@@ -39,8 +39,8 @@ class PastRecordsVC: TSBaseVC {
         setUp()
     }
 
-    override func viewWillLayoutSubviews() {
-        tableViewHeight.constant = CGFloat(tableView.numberOfRows(inSection: 0) * 96)
+    override func updateViewConstraints() {
+        tableViewHeight.constant = tableView.contentSize.height; super.updateViewConstraints()
     }
 
     func setUp() {
@@ -74,6 +74,7 @@ class PastRecordsVC: TSBaseVC {
                             let tweet = Tweet(text: text, sentiment: Sentiment(score: score, date: date, emoji: emoji!))
                             self.tweetArray.append(tweet)
                             tableView.isHidden = false
+                            noRecordsView.isHidden = true
                             self.tableView.reloadData()
                             let indexPath = IndexPath(row: self.tweetArray.count - 1, section: 0)
                             self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
