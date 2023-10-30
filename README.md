@@ -7,6 +7,11 @@ This is an application built as a part of my Software Engineering course. It exp
 3. On clicking continue, they are presented with a sentimental score based on tweets containing the text they sent.
 4. A Twitter API for searching and fetching tweets based on the text they sent is implemented. These tweets are processed through an mlmodel which predicts their sentimental score.
 5. The users can view their past records in the Past Records page.
-6. They can sign out and sign in with their account. 
+6. They can sign out and sign in with their account.
 
+## Steps
+
+1. ![WhatsApp Image 2023-05-18 at 09 28 25 (1)](https://github.com/AdithyahNair/tweetSenti/assets/74417984/b69f020e-d283-4578-9fd6-93b8f7907738)
+
+2. 
 
