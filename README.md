@@ -9,9 +9,28 @@ This is an application built as a part of my Software Engineering course. It exp
 5. The users can view their past records in the Past Records page.
 6. They can sign out and sign in with their account.
 
-## Steps
+## Process View
 
-1. ![WhatsApp Image 2023-05-18 at 09 28 25 (1)](https://github.com/AdithyahNair/tweetSenti/assets/74417984/b69f020e-d283-4578-9fd6-93b8f7907738)
+1. Onboarding Screen
 
-2. 
+![WhatsApp Image 2023-05-18 at 09 28 25 (1)](https://github.com/AdithyahNair/tweetSenti/assets/74417984/b69f020e-d283-4578-9fd6-93b8f7907738)
+
+2. Main Screen
+
+![WhatsApp Image 2023-05-18 at 09 28 25 (4)](https://github.com/AdithyahNair/tweetSenti/assets/74417984/d99e878a-60d6-4f70-96de-3a70e5c4e8f5)
+
+3. Emoji-based response
+
+![WhatsApp Image 2023-05-18 at 09 28 25 (5)](https://github.com/AdithyahNair/tweetSenti/assets/74417984/93a3197a-3e5a-44fa-b91c-5f82c7df4303)
+
+4. Past Records View
+
+![WhatsApp Image 2023-05-18 at 09 28 25 (6)](https://github.com/AdithyahNair/tweetSenti/assets/74417984/cc16b976-e7cd-4902-b034-d9ee974d975c)
+
+5. Once they sign out, they can login using the Login View
+
+
+![WhatsApp Image 2023-05-18 at 09 28 25 (3)](https://github.com/AdithyahNair/tweetSenti/assets/74417984/bd1be409-342c-41a7-ae87-5502d79fb6a4)
+
+
 
